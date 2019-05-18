@@ -1,3 +1,5 @@
+# bitbucket.org/tradency_team/kubemq-grpc v1.0.0
+bitbucket.org/tradency_team/kubemq-grpc/go
 # github.com/fsnotify/fsnotify v1.4.7
 github.com/fsnotify/fsnotify
 # github.com/gogo/protobuf v1.2.0
@@ -55,6 +57,7 @@ github.com/spf13/pflag
 # github.com/spf13/viper v1.3.2
 github.com/spf13/viper
 # golang.org/x/net v0.0.0-20190311183353-d8887717615a
+golang.org/x/net/context
 golang.org/x/net/trace
 golang.org/x/net/internal/timeseries
 golang.org/x/net/http2

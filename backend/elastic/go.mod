@@ -3,6 +3,7 @@ module github.com/kubemq/demo/backend/elastic
 go 1.12
 
 require (
+	bitbucket.org/tradency_team/kubemq-grpc v1.0.0
 	github.com/google/uuid v1.1.1
 	github.com/kr/pretty v0.1.0 // indirect
 	github.com/kubemq-io/kubemq-go v1.1.2

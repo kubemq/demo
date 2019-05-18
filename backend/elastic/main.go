@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/kubemq-io/kubemq-go"
+	kubemq "github.com/kubemq-io/kubemq-go"
 	"log"
 	"os"
 	"os/signal"
