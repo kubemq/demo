@@ -54,11 +54,19 @@ services:
       - backend
   redis:
     image: redis
-#    command: redis-server /usr/local/etc/redis/redis.conf
-#    volumes:
-#      - ./redis.conf:/usr/local/etc/redis/redis.conf
     ports:
       - "6379:6379"
+    networks:
+      - backend
+  kubemq-redis:
+    image: kubemq/kubemq-redis:v0.1.0
+    container_name: kubemq-redis
+    environment:
+      REDIS_ADDRESS: "redis:6379"
+      KUBEMQ_HOST: kubemq
+      KUBEMQ_POST: 50000
+      CHANNEL: "redis"
+      GROUP: ""
     networks:
       - backend
 networks:

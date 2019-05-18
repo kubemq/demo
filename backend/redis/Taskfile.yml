@@ -13,7 +13,7 @@ tasks:
   run:
     cmds:
       - task: default
-      - {{.BINARY_NAME}}
+
   clean:
     cmds:
       - go clean
