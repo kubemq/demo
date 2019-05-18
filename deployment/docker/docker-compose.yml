@@ -1,5 +1,20 @@
 version: '3.7'
 services:
+  kubemq:
+    image: kubemq/kubemq:v1.5.1
+    container_name: kubemq
+    ports:
+      - "8080:8080"
+      - "9090:9090"
+      - "50000:50000"
+    environment:
+      - KUBEMQ_HOST=kubemq
+      - KUBEMQ_TOKEN=c5111981-0a76-45f1-81a3-080af7fb6028
+    networks:
+      - backend
+      - frontend
+    volumes:
+      - kubemq_vol:/store
   elasticsearch:
     image: docker.elastic.co/elasticsearch/elasticsearch:7.0.1
     container_name: elasticsearch
@@ -26,7 +41,19 @@ services:
       - "5601:5601"
     networks:
       - backend
-
+  kubemq-elastic:
+    image: kubemq/kubemq-elastic:v0.1.0
+    container_name: kubemq-elastic
+    environment:
+      ELASTIC_ADDRESS: http://elasticsearch:9200/
+      KUBEMQ_HOST: kubemq
+      KUBEMQ_POST: 50000
+      CHANNEL: "logs"
+      GROUP: ""
+    networks:
+      - backend
 networks:
   backend:
   frontend:
+volumes:
+  kubemq_vol:

@@ -3,7 +3,7 @@
 version: '2'
 
 vars:
-  BINARY_NAME: kubemq_elastic
+  BINARY_NAME: kubemq-elastic
   VERSION: v0.1.0
 
 tasks:
@@ -37,5 +37,3 @@ tasks:
     cmds:
       - task: docker
       - task: push
-      - git tag -a {{.VERSION}} -m {{.VERSION}}
-      - git push origin master --tags

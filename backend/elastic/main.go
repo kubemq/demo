@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"fmt"
+	"time"
 
 	kubemq "github.com/kubemq-io/kubemq-go"
 	"log"
@@ -29,23 +30,40 @@ func main() {
 		log.Println("error on loading config file:")
 		log.Fatal(err)
 	}
-	el, err := NewElasticSearch(cfg.ElasticAddress)
-	if err != nil {
-		log.Fatal(err)
+	var el *Elastic
+	log.Println("Wait for Elastic to be ready")
+	for {
+		el, err = NewElasticSearch(cfg.ElasticAddress)
+		if err != nil {
+			log.Printf("error connecting to elastic, error: %s retrying...\n",err.Error())
+		}else {
+			break
+		}
 	}
+
+
 	kube, err := NewKubeMQClient(cfg.KubeMQHost, cfg.KubeMQPort)
 	if err != nil {
+
 		log.Fatal(err)
 	}
 	eventsCh := make(chan *kubemq.Event, 1)
 	errCh := make(chan error, 1)
 	ctx, cancel := context.WithCancel(context.Background())
 	defer cancel()
+	log.Println("Wait for kubemq to be ready")
+	for {
+		err = kube.StartListen(ctx, cfg.Channel, cfg.Group, eventsCh, errCh)
+		if err != nil {
+			log.Printf("error connecting to kubemq, error: %s, retrying...\n",err.Error())
+			time.Sleep(time.Second)
+		}else {
 
-	err = kube.StartListen(ctx, cfg.Channel, cfg.Group, eventsCh, errCh)
-	if err != nil {
-		log.Fatal(err)
+			break
+
+		}
 	}
+
 	log.Println("waiting for events from KubeMQ")
 	for {
 		select {

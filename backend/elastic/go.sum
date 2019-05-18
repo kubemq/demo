@@ -1,5 +1,3 @@
-bitbucket.org/tradency_team/kubemq-grpc v1.0.0 h1:9npOHxFx5WANqwP3JfulIeGY3rPZfkMnSZDwtbsClMI=
-bitbucket.org/tradency_team/kubemq-grpc v1.0.0/go.mod h1:rD76oVZ7QRpgUAvsYR0exP24aUruvEySatjINphUy2I=
 cloud.google.com/go v0.26.0/go.mod h1:aQUYkXzVsufM+DwF1aE+0xfcU+56JwCaLick0ClmMTw=
 cloud.google.com/go v0.34.0/go.mod h1:aQUYkXzVsufM+DwF1aE+0xfcU+56JwCaLick0ClmMTw=
 git.apache.org/thrift.git v0.12.0/go.mod h1:fPE2ZNJGynbRyZ4dJvy6G277gSllfV2HJqblrnkyeyg=
