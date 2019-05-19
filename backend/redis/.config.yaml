@@ -3,3 +3,4 @@ kubeMQHost: "localhost"
 kubeMQPort: 50000
 channel: "redis"
 group: ""
+logsChannel: "elastic"

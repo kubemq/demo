@@ -48,12 +48,13 @@ services:
       ELASTIC_ADDRESS: http://elasticsearch:9200/
       KUBEMQ_HOST: kubemq
       KUBEMQ_POST: 50000
-      CHANNEL: "logs"
+      CHANNEL: "elastic"
       GROUP: ""
     networks:
       - backend
   redis:
     image: redis
+    container_name: redis
     ports:
       - "6379:6379"
     networks:
@@ -67,10 +68,24 @@ services:
       KUBEMQ_POST: 50000
       CHANNEL: "redis"
       GROUP: ""
+      LogsChannel: "Elastic"
+    networks:
+        - backend
+  postgres:
+    image: postgres
+    container_name: postgres
+    environment:
+      POSTGRES_PASSWORD: "password"
+    ports:
+      - "5432:5432"
     networks:
       - backend
+    volumes:
+      - postgress_vol:/var/lib/postgresql/data
+
 networks:
   backend:
   frontend:
 volumes:
   kubemq_vol:
+  postgress_vol:

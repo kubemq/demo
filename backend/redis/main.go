@@ -1,8 +1,11 @@
 package main
 
 import (
+	"bytes"
 	"context"
+	"encoding/json"
 	"fmt"
+	"github.com/google/uuid"
 	"time"
 
 	"github.com/kubemq-io/kubemq-go"
@@ -12,11 +15,21 @@ import (
 	"syscall"
 )
 
-type Log struct {
+type RedisLog struct {
 	ID       string `json:"id"`
-	ClientID string `json:"client_id"`
-	Metadata string `json:"metadata"`
-	Body     string `json:"body"`
+	CreateAt time.Time
+	Command  string `json:"command"`
+	Key      string `json:"key"`
+	Value    string `json:"value"`
+	Result   string `json:"result"`
+}
+
+func (rl *RedisLog) String() string {
+	data, _ := json.Marshal(rl)
+	var buff *bytes.Buffer
+	_ = json.Indent(buff, data, "", "\t")
+
+	return buff.String()
 }
 
 func main() {
@@ -41,7 +54,7 @@ func main() {
 		}
 	}
 
-	kube, err := NewKubeMQClient(cfg.KubeMQHost, cfg.KubeMQPort)
+	kube, err := NewKubeMQClient(cfg.KubeMQHost, cfg.KubeMQPort, cfg.LogsChannel)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -95,8 +108,22 @@ func main() {
 			err = kube.SendResponse(ctx, resp)
 			if err != nil {
 				log.Printf("error on sending response from redis: %s\n", err.Error())
-				continue
+
 			}
+			rl := &RedisLog{
+				ID:       uuid.New().String(),
+				CreateAt: time.Now(),
+				Command:  "Set",
+				Key:      command.Metadata,
+				Value:    string(command.Body),
+				Result:   "",
+			}
+			if resp.Err != nil {
+				rl.Result = resp.Err.Error()
+			} else {
+				rl.Result = "ok"
+			}
+			err = kube.SendLog(ctx, "redis", rl.String())
 			log.Println("redis Set command completed")
 		case query := <-queriesCh:
 			log.Println(fmt.Sprintf("redis Get command received - Key: %s", query.Metadata))
@@ -117,7 +144,20 @@ func main() {
 			err = kube.SendResponse(ctx, resp)
 			if err != nil {
 				log.Printf("error on sending response from redis: %s\n", err.Error())
-				continue
+
+			}
+			rl := &RedisLog{
+				ID:       uuid.New().String(),
+				CreateAt: time.Now(),
+				Command:  "Get",
+				Key:      query.Metadata,
+				Value:    string(resp.Body),
+				Result:   "",
+			}
+			if resp.Err != nil {
+				rl.Result = resp.Err.Error()
+			} else {
+				rl.Result = "ok"
 			}
 			log.Println(fmt.Sprintf("redis Get command completed with Value: %s", string(result)))
 		case err := <-errCh:

@@ -7,10 +7,11 @@ import (
 )
 
 type KubeMQ struct {
-	client *kubemq.Client
+	client      *kubemq.Client
+	logsChannel string
 }
 
-func NewKubeMQClient(host string, port int) (*KubeMQ, error) {
+func NewKubeMQClient(host string, port int, logsChannel string) (*KubeMQ, error) {
 	client, err := kubemq.NewClient(context.Background(),
 		kubemq.WithAddress(host, port),
 		kubemq.WithClientId(uuid.New().String()),
@@ -22,6 +23,14 @@ func NewKubeMQClient(host string, port int) (*KubeMQ, error) {
 		client: client,
 	}
 	return k, nil
+}
+func (k *KubeMQ) SendLog(ctx context.Context, source, entry string) error {
+	return k.client.E().
+		SetId(uuid.New().String()).
+		SetMetadata(source).
+		SetBody([]byte(entry)).
+		SetChannel(k.logsChannel).
+		Send(ctx)
 }
 
 func (k *KubeMQ) StartListenToCommands(ctx context.Context, channel, group string, commandsCh chan *kubemq.CommandReceive, errCh chan error) error {
