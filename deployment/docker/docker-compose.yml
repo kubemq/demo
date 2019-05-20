@@ -48,7 +48,7 @@ services:
       ELASTIC_ADDRESS: http://elasticsearch:9200/
       KUBEMQ_HOST: kubemq
       KUBEMQ_POST: 50000
-      CHANNEL: "elastic"
+      CHANNEL: "history"
       GROUP: ""
     networks:
       - backend

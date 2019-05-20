@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="837e4614-69ad-48e9-ac64-6a5b45c5995a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../backend/elastic/history.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../backend/notification/.config.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../backend/notification/.idea/markdown-navigator/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../backend/notification/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../backend/notification/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../backend/notification/.idea/notification.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../backend/notification/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../backend/notification/.idea/watcherTasks.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../backend/notification/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../backend/notification/config.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../backend/notification/go.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../backend/notification/kubemq.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../backend/notification/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../backend/users/.idea/markdown-navigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../backend/users/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../backend/users/Taskfile.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../backend/users/history.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../backend/users/processor.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../identity/.idea/markdown-navigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../identity/entities.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.config.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/markdown-navigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/markdown-navigator/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runner.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entities.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rest.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/runner.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../backend/elastic/.config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../../backend/elastic/.config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../backend/elastic/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../backend/elastic/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../backend/elastic/elastic.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../backend/elastic/elastic.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../backend/elastic/elastic.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../backend/elastic/elastic.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../backend/elastic/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../backend/elastic/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../backend/redis/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../backend/redis/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../backend/users/.config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../../backend/users/.config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../backend/users/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../backend/users/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../backend/users/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../backend/users/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../backend/users/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../backend/users/config.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../backend/users/entities.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../backend/users/entities.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../backend/users/kubemq.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../backend/users/kubemq.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../backend/users/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../backend/users/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../backend/users/users.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../backend/users/users.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../deployment/docker/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../../deployment/docker/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../identity/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../identity/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../identity/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../identity/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../identity/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/../identity/config.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../identity/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/../identity/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../identity/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/../identity/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../identity/handlers.go" beforeDir="false" afterPath="$PROJECT_DIR$/../identity/handlers.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../identity/kubemq.go" beforeDir="false" afterPath="$PROJECT_DIR$/../identity/kubemq.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../identity/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../identity/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../identity/response.go" beforeDir="false" afterPath="$PROJECT_DIR$/../identity/response.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../identity/rest.go" beforeDir="false" afterPath="$PROJECT_DIR$/../identity/rest.go" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/go.mod">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="104">
+              <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.config.yaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="20" selection-start-column="20" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="364">
+              <caret line="14" column="46" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/entities.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="444">
+              <caret line="19" selection-start-line="19" selection-end-line="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="728">
+              <caret line="28" selection-start-line="28" selection-end-line="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/runner.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="57" column="28" selection-start-line="57" selection-start-column="28" selection-end-line="57" selection-end-column="28" />
+              <folding>
+                <marker date="1558366436792" expanded="true" signature="660:1522" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rest.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="70">
+              <caret line="78" selection-start-line="78" selection-end-line="78" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" path="C:\Go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/config.go" />
+        <option value="$PROJECT_DIR$/go.mod" />
+        <option value="$PROJECT_DIR$/main.go" />
+        <option value="$PROJECT_DIR$/.config.yaml" />
+        <option value="$PROJECT_DIR$/rest.go" />
+        <option value="$PROJECT_DIR$/runner.go" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-14" />
+    <option name="y" value="-14" />
+    <option name="width" value="2154" />
+    <option name="height" value="1168" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="runner" type="b2602c69:ProjectViewProjectNode" />
+              <item name="runner" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="go.gopath.indexing.explicitly.defined" value="true" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="go.sdk.automatically.set" value="true" />
+    <property name="go.vendoring.notification.had.been.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../kubetools" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="go.vgo" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Development\projects\kubemq\demo\frontend\runner" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="runner" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/main.go" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Build.go build main.go" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-6" y="-6" width="1933" height="1053" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2536271" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3298611" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39930555" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3298611" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>true</integration-enabled>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/config.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="14" column="46" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/go.mod">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.config.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="20" selection-start-column="20" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="728">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rest.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70">
+          <caret line="78" selection-start-line="78" selection-end-line="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/entities.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="444">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runner.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="57" column="28" selection-start-line="57" selection-start-column="28" selection-end-line="57" selection-end-column="28" />
+          <folding>
+            <marker date="1558366436792" expanded="true" signature="660:1522" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

@@ -2,18 +2,20 @@ package main
 
 import (
 	"context"
+	"fmt"
 	"github.com/google/uuid"
 	"github.com/kubemq-io/kubemq-go"
+	"log"
 )
 
 type KubeMQ struct {
-	client      *kubemq.Client
-	logsChannel string
+	client *kubemq.Client
+	cfg    *Config
 }
 
-func NewKubeMQClient(host string, port int, logsChannel string) (*KubeMQ, error) {
+func NewKubeMQClient(cfg *Config) (*KubeMQ, error) {
 	client, err := kubemq.NewClient(context.Background(),
-		kubemq.WithAddress(host, port),
+		kubemq.WithAddress(cfg.KubeMQHost, cfg.KubeMQPort),
 		kubemq.WithClientId(uuid.New().String()),
 		kubemq.WithTransportType(kubemq.TransportTypeGRPC))
 	if err != nil {
@@ -21,16 +23,9 @@ func NewKubeMQClient(host string, port int, logsChannel string) (*KubeMQ, error)
 	}
 	k := &KubeMQ{
 		client: client,
+		cfg:    cfg,
 	}
 	return k, nil
-}
-func (k *KubeMQ) SendLog(ctx context.Context, source, entry string) error {
-	return k.client.E().
-		SetId(uuid.New().String()).
-		SetMetadata(source).
-		SetBody([]byte(entry)).
-		SetChannel(k.logsChannel).
-		Send(ctx)
 }
 
 func (k *KubeMQ) StartListenToCommands(ctx context.Context, channel, group string, commandsCh chan *kubemq.CommandReceive, errCh chan error) error {
@@ -88,6 +83,23 @@ func (k *KubeMQ) SendResponse(ctx context.Context, response *kubemq.Response) er
 		SetResponseTo(response.ResponseTo).
 		SetRequestId(response.RequestId).
 		Send(ctx)
+
+}
+
+func (k *KubeMQ) SendToHistory(ctx context.Context, his *History) {
+	err := k.client.E().SetChannel(k.cfg.HistoryChannel).SetId(his.Id).SetBody(his.Data()).SetMetadata(his.Method).Send(ctx)
+	if err != nil {
+		log.Println(fmt.Sprintf("error sending to history, error: %s", err.Error()))
+	}
+}
+
+func (k *KubeMQ) SendToNotification(ctx context.Context, metadata string, data []byte) {
+	res, err := k.client.ES().SetChannel(k.cfg.NotificationChannel).SetMetadata(metadata).SetBody([]byte(fmt.Sprintf("%s", string(data)))).Send(ctx)
+	if err != nil {
+		log.Println(fmt.Sprintf("error sending to notification, error: %s", err.Error()))
+		return
+	}
+	log.Println(fmt.Sprintf("sending to notification, sent: %t, data: %s", res.Sent, data))
 
 }
 func (k *KubeMQ) Close() {

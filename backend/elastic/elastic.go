@@ -16,13 +16,31 @@ const mapping = `
 	},
 	"mappings": {
 		"properties": {
-			"client_id": {
+			"id": {
 				"type": "keyword"
 			},
-			"metadata": {
+			"source": {
 				"type": "keyword"
 			},
-			"body": {
+			"type": {
+				"type": "keyword"
+			},
+			"method": {
+				"type": "keyword"
+			},
+			"time": {
+				"type": "date"
+			},
+			"request": {
+				"type": "text"
+			},
+			"response": {
+				"type": "text"
+			},
+			"is_error": {
+				"type": "keyword"
+			},
+			"error_message": {
 				"type": "text"
 			}
 		}
@@ -45,29 +63,29 @@ func NewElasticSearch(url string) (*Elastic, error) {
 		return nil, err
 	}
 	fmt.Printf("Elasticsearch returned with code %d and version %s\n", code, info.Version.Number)
-	exists, err := client.IndexExists("logs").Do(ctx)
+	exists, err := client.IndexExists("history").Do(ctx)
 	if err != nil {
 		return nil, err
 	}
 	if exists {
-		resultDelete, err := client.DeleteIndex("logs").Do(ctx)
+		resultDelete, err := client.DeleteIndex("history").Do(ctx)
 		if err != nil {
 			return nil, err
 		}
 		if !resultDelete.Acknowledged {
-			return nil, errors.New("index logs was not deleted")
+			return nil, errors.New("index history was not deleted")
 		}
 
 	}
 
-	createIndex, err := client.CreateIndex("logs").BodyString(mapping).Do(ctx)
+	createIndex, err := client.CreateIndex("history").BodyString(mapping).Do(ctx)
 	if err != nil {
 		return nil, err
 	}
 	if !createIndex.Acknowledged {
 		// Not acknowledged
 	}
-	log.Println("Elasticsearch created logs index")
+	log.Println("Elasticsearch created history index")
 
 	el := &Elastic{
 		client: client,
@@ -75,11 +93,11 @@ func NewElasticSearch(url string) (*Elastic, error) {
 	return el, nil
 }
 
-func (el *Elastic) Save(ctx context.Context, msg *Log) error {
-	log.Printf("Event Id: %s recevied, saving to elastic.\n", msg.ID)
+func (el *Elastic) Save(ctx context.Context, msg *History) error {
+	log.Printf("History Id: %s recevied, saving to elastic.\n", msg.Id)
 	_, err := el.client.Index().
-		Index("logs").
-		Id(msg.ID).
+		Index("history").
+		Id(msg.Id).
 		BodyJson(msg).
 		Do(ctx)
 	if err != nil {

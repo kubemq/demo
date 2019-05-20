@@ -2,10 +2,10 @@ package main
 
 import (
 	"context"
-	"fmt"
+	"encoding/json"
 	"time"
 
-	kubemq "github.com/kubemq-io/kubemq-go"
+	"github.com/kubemq-io/kubemq-go"
 	"log"
 	"os"
 	"os/signal"
@@ -68,13 +68,13 @@ func main() {
 	for {
 		select {
 		case event := <-eventsCh:
-			fmt.Println(event)
-			err := el.Save(ctx, &Log{
-				ID:       event.Id,
-				ClientID: event.ClientId,
-				Metadata: event.Metadata,
-				Body:     string(event.Body),
-			})
+			his:=&History{}
+			err:=json.Unmarshal(event.Body,his)
+			if err != nil {
+				log.Println(err)
+				continue
+			}
+			err = el.Save(ctx, his)
 			if err != nil {
 				log.Println(err)
 			}

@@ -45,7 +45,7 @@ func (k *KubeMQ) SendCommand(ctx context.Context, channel, metadata string, data
 		SetMetadata(metadata).
 		SetBody(body).
 		SetChannel(channel).
-		SetTimeout(time.Second).
+		SetTimeout(30 * time.Second).
 		Send(ctx)
 }
 
@@ -59,7 +59,7 @@ func (k *KubeMQ) SendQuery(ctx context.Context, channel, metadata string, data i
 		SetMetadata(metadata).
 		SetBody([]byte(body)).
 		SetChannel(channel).
-		SetTimeout(time.Second).
+		SetTimeout(30 * time.Second).
 		Send(ctx)
 }
 

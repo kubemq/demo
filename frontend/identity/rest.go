@@ -8,20 +8,18 @@ import (
 )
 
 type Server struct {
-	
 	echoWebServer *echo.Echo
-	kube *KubeMQ
-	config *Config
-	
+	kube          *KubeMQ
+	cfg           *Config
 }
 
 func NewServer(kube *KubeMQ, config *Config) (*Server, error) {
 	s := &Server{
 		echoWebServer: nil,
-		kube:kube,
-		config:config,
+		kube:          kube,
+		cfg:           config,
 	}
-	
+
 	e := echo.New()
 	s.echoWebServer = e
 
@@ -31,53 +29,36 @@ func NewServer(kube *KubeMQ, config *Config) (*Server, error) {
 
 	e.HTTPErrorHandler = s.customHTTPErrorHandler
 	e.POST("/register", func(c echo.Context) error {
-		return register(c)
+		return s.register(c)
 	})
-	//e.GET("/", func(c echo.Context) error {
-	//	return c.String(http.StatusOK, "hi")
-	//})
-	//
-	//// route to websocket of subscribe to commands
-	//e.GET("/subscribe/events", func(c echo.Context) error {
-	//	return nil
-	//})
-	//
-	//// route to websocket of subscribe to request
-	//e.GET("/subscribe/requests", func(c echo.Context) error {
-	//
-	//	return s.handlerSubscribeToRequests(c, appConfig)
-	//})
-	//
-	//// route to websocket of sending stream of messages
-	//e.GET("/send/stream", func(c echo.Context) error {
-	//
-	//	return s.handlerSendMessageStream(c)
-	//
-	//})
-	//
-	//// route to post message
-	//e.POST("/send/event", func(c echo.Context) error {
-	//	return s.handlerSendMessage(c)
-	//})
-	//
-	//// route to post request
-	//e.POST("/send/request", func(c echo.Context) error {
-	//	return s.handlerSendRequest(c)
-	//})
-	//
-	//// route to post response
-	//e.POST("/send/response", func(c echo.Context) error {
-	//	return s.handlerSendResponse(c)
-	//})
+	e.POST("/verify", func(c echo.Context) error {
+		return s.verify(c)
+	})
+	e.POST("/login", func(c echo.Context) error {
+		return s.login(c)
+	})
+	e.POST("/logout", func(c echo.Context) error {
+		return s.logout(c)
+	})
+	e.POST("/password_reset", func(c echo.Context) error {
+		return s.passwordReset(c)
+	})
+	e.POST("/password_change", func(c echo.Context) error {
+		return s.passwordChange(c)
+	})
+	e.POST("/lock", func(c echo.Context) error {
+		return s.lock(c)
+	})
+	e.POST("/unlock", func(c echo.Context) error {
+		return s.unlock(c)
+	})
 
-	go func () {
-		_ = s.echoWebServer.Start(":" + port)
+	go func() {
+		_ = s.echoWebServer.Start(":" + s.cfg.Port)
 	}()
 
 	return s, nil
 }
-
-
 
 type ErrorMessage struct {
 	ErrorCode int    `json:"error_code"`

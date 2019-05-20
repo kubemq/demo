@@ -5,20 +5,21 @@ import (
 )
 
 type Config struct {
-	KubeMQHost       string
-	KubeMQPort       int
-	PostgresHost     string
-	PostgresPort     int
-	PostgresUser     string
-	PostgresPassword string
-	PostgresDB       string
-	UsersChannel     string
-	CacheChannel     string
-	AuditChannel     string
-	HistoryChannel   string
-	LogsChannel      string
-	ConfigChannel    string
-	Group            string
+	KubeMQHost          string
+	KubeMQPort          int
+	PostgresHost        string
+	PostgresPort        int
+	PostgresUser        string
+	PostgresPassword    string
+	PostgresDB          string
+	UsersChannel        string
+	CacheChannel        string
+	AuditChannel        string
+	HistoryChannel      string
+	LogsChannel         string
+	ConfigChannel       string
+	NotificationChannel string
+	Group               string
 }
 
 func LoadConfig() (*Config, error) {
@@ -38,6 +39,7 @@ func LoadConfig() (*Config, error) {
 	viper.BindEnv("HistoryChannel", "HISTORY_CHANNEL")
 	viper.BindEnv("LogsChannel", "LOGS_CHANNEL")
 	viper.BindEnv("ConfigChannel", "CONFIG_CHANNEL")
+	viper.BindEnv("NotificationChannel", "NOTIFICATION_CHANNEL")
 	viper.BindEnv("Group", "GROUP")
 
 	err := viper.ReadInConfig()
