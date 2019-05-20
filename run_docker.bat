@@ -1,0 +1,2 @@
+docker-compose -f D:\Development\projects\kubemq\demo\deployment\docker\docker-compose.yml up -d
+docker run -d -p 8888:80 -e SOCKET_API=ws://localhost:8080/v1/stats/ -e DASHBOARD_API=//localhost:8080/v1/stats/ kubemq/kubemq-dashboard:latest

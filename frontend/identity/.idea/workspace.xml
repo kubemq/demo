@@ -2,67 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c3066abe-04d3-4f6f-bdbf-6f0e3f9422b3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../backend/elastic/history.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../backend/notification/.config.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../backend/notification/.idea/markdown-navigator/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../backend/notification/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../backend/notification/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../backend/notification/.idea/notification.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../backend/notification/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../backend/notification/.idea/watcherTasks.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../backend/notification/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../backend/notification/config.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../backend/notification/go.mod" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../backend/notification/kubemq.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../backend/notification/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../backend/users/.idea/markdown-navigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../backend/users/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../backend/users/Taskfile.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../backend/users/history.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../backend/users/processor.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/markdown-navigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/entities.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../runner/.config.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../runner/.idea/markdown-navigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../runner/.idea/markdown-navigator/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../runner/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../runner/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../runner/.idea/runner.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../runner/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../runner/.idea/watcherTasks.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../runner/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../runner/config.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../runner/entities.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../runner/go.mod" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../runner/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../runner/rest.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../runner/runner.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../backend/elastic/run.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../run_docker.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../run_elastic.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../run_identity.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../run_notification.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../run_redis.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../run_runner.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../run_users.bat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../backend/elastic/.config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../../backend/elastic/.config.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../backend/elastic/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../backend/elastic/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../backend/elastic/elastic.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../backend/elastic/elastic.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../backend/elastic/elastic.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../backend/elastic/elastic.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../backend/elastic/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../backend/elastic/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../backend/redis/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../backend/redis/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../backend/users/.config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../../backend/users/.config.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../backend/users/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../backend/users/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../backend/notification/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../backend/notification/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../backend/users/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../backend/users/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../backend/users/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../backend/users/config.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../backend/users/entities.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../backend/users/entities.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../backend/users/kubemq.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../backend/users/kubemq.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../backend/users/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../backend/users/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../backend/users/users.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../backend/users/users.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../deployment/docker/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../../deployment/docker/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/config.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handlers.go" beforeDir="false" afterPath="$PROJECT_DIR$/handlers.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kubemq.go" beforeDir="false" afterPath="$PROJECT_DIR$/kubemq.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/response.go" beforeDir="false" afterPath="$PROJECT_DIR$/response.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest.go" beforeDir="false" afterPath="$PROJECT_DIR$/rest.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../runner/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

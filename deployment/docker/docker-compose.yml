@@ -41,17 +41,17 @@ services:
       - "5601:5601"
     networks:
       - backend
-  kubemq-elastic:
-    image: kubemq/kubemq-elastic:v0.1.0
-    container_name: kubemq-elastic
-    environment:
-      ELASTIC_ADDRESS: http://elasticsearch:9200/
-      KUBEMQ_HOST: kubemq
-      KUBEMQ_POST: 50000
-      CHANNEL: "history"
-      GROUP: ""
-    networks:
-      - backend
+#  kubemq-elastic:
+#    image: kubemq/kubemq-elastic:v0.1.0
+#    container_name: kubemq-elastic
+#    environment:
+#      ELASTIC_ADDRESS: http://elasticsearch:9200/
+#      KUBEMQ_HOST: kubemq
+#      KUBEMQ_POST: 50000
+#      CHANNEL: "history"
+#      GROUP: ""
+#    networks:
+#      - backend
   redis:
     image: redis
     container_name: redis
@@ -59,18 +59,18 @@ services:
       - "6379:6379"
     networks:
       - backend
-  kubemq-redis:
-    image: kubemq/kubemq-redis:v0.1.0
-    container_name: kubemq-redis
-    environment:
-      REDIS_ADDRESS: "redis:6379"
-      KUBEMQ_HOST: kubemq
-      KUBEMQ_POST: 50000
-      CHANNEL: "redis"
-      GROUP: ""
-      LogsChannel: "Elastic"
-    networks:
-        - backend
+#  kubemq-redis:
+#    image: kubemq/kubemq-redis:v0.1.0
+#    container_name: kubemq-redis
+#    environment:
+#      REDIS_ADDRESS: "redis:6379"
+#      KUBEMQ_HOST: kubemq
+#      KUBEMQ_POST: 50000
+#      CHANNEL: "redis"
+#      GROUP: ""
+#      LogsChannel: "Elastic"
+#    networks:
+#        - backend
   postgres:
     image: postgres
     container_name: postgres
@@ -82,6 +82,18 @@ services:
       - backend
     volumes:
       - postgress_vol:/var/lib/postgresql/data
+#  dashboard:
+#    image: kubemq/kubemq-dashboard:latest
+#    container_name: dashboard
+#    environment:
+#      SOCKET_API: ws://kubemq:8080/v1/stats/
+#      DASHBOARD_API: //kubemq:8080/v1/stats/
+#    ports:
+#      - "8888:80"
+#    networks:
+#      - backend
+#    volumes:
+#      - postgress_vol:/var/lib/postgresql/data
 
 networks:
   backend:
