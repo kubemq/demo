@@ -19,10 +19,9 @@ func main() {
 		log.Println("error on loading config file:")
 		log.Fatal(err)
 	}
-	url = cfg.ApiAddress
 	ctx, cancel := context.WithCancel(context.Background())
 	defer cancel()
-	go run(ctx)
+	go run(ctx, cfg.ApiAddress, cfg.Interval)
 	<-gracefulShutdown
 
 }

@@ -6,6 +6,7 @@ import (
 
 type Config struct {
 	ApiAddress string
+	Interval   int
 }
 
 func LoadConfig() (*Config, error) {
@@ -13,6 +14,7 @@ func LoadConfig() (*Config, error) {
 	viper.AddConfigPath("./")
 	viper.SetConfigName(".config")
 	viper.BindEnv("ApiAddress", "API_ADDRESS")
+	viper.BindEnv("Interval", "INTERVAL")
 
 	err := viper.ReadInConfig()
 	if err != nil {

@@ -7,15 +7,13 @@ import (
 	"github.com/go-resty/resty"
 )
 
-var url string
-
 type Response struct {
 	IsError bool            `json:"is_error"`
 	Message string          `json:"message"`
 	Data    json.RawMessage `json:"data"`
 }
 
-func Register(newUser *NewUser) (*User, error) {
+func Register(url string, newUser *NewUser) (*User, error) {
 
 	resp := &Response{}
 	uri := fmt.Sprintf("%s/register", url)
@@ -34,7 +32,7 @@ func Register(newUser *NewUser) (*User, error) {
 	return user, nil
 }
 
-func SendVerify(name, token string) error {
+func SendVerify(url, name, token string) error {
 
 	resp := &Response{}
 	uri := fmt.Sprintf("%s/verify", url)
@@ -53,7 +51,7 @@ func SendVerify(name, token string) error {
 	return nil
 }
 
-func SendLogin(name, password string) (*LoginResponse, error) {
+func SendLogin(url, name, password string) (*LoginResponse, error) {
 
 	resp := &Response{}
 	uri := fmt.Sprintf("%s/login", url)
@@ -77,7 +75,7 @@ func SendLogin(name, password string) (*LoginResponse, error) {
 	return lr, nil
 }
 
-func SendLogout(userId string) error {
+func SendLogout(url, userId string) error {
 
 	resp := &Response{}
 	uri := fmt.Sprintf("%s/logout", url)

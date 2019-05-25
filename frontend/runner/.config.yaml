@@ -1,1 +1,2 @@
 apiAddress: "http://localhost:80"
+interval: 15

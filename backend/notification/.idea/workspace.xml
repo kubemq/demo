@@ -2,19 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9067fba-f061-4d17-b898-ad2e1156b9d0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/slack.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/markdown-navigator.xml" afterDir="false" />
       <change beforePath="$GOPATH$/projects/kubemq/demo/.idea/workspace.xml" beforeDir="false" afterPath="$GOPATH$/projects/kubemq/demo/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$GOPATH$/projects/kubemq/demo/backend/elastic/elastic.exe" beforeDir="false" afterPath="$GOPATH$/projects/kubemq/demo/backend/elastic/elastic.exe" afterDir="false" />
       <change beforePath="$GOPATH$/projects/kubemq/demo/backend/elastic/go.mod" beforeDir="false" afterPath="$GOPATH$/projects/kubemq/demo/backend/elastic/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/.config.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/config.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
       <change beforePath="$GOPATH$/projects/kubemq/demo/backend/redis/go.mod" beforeDir="false" afterPath="$GOPATH$/projects/kubemq/demo/backend/redis/go.mod" afterDir="false" />
       <change beforePath="$GOPATH$/projects/kubemq/demo/backend/users/go.mod" beforeDir="false" afterPath="$GOPATH$/projects/kubemq/demo/backend/users/go.mod" afterDir="false" />
       <change beforePath="$GOPATH$/projects/kubemq/demo/backend/users/users.exe" beforeDir="false" afterPath="$GOPATH$/projects/kubemq/demo/backend/users/users.exe" afterDir="false" />
+      <change beforePath="$GOPATH$/projects/kubemq/demo/deployment/docker/docker-compose.yml" beforeDir="false" afterPath="$GOPATH$/projects/kubemq/demo/deployment/docker/docker-compose.yml" afterDir="false" />
       <change beforePath="$GOPATH$/projects/kubemq/demo/frontend/identity/go.mod" beforeDir="false" afterPath="$GOPATH$/projects/kubemq/demo/frontend/identity/go.mod" afterDir="false" />
       <change beforePath="$GOPATH$/projects/kubemq/demo/frontend/runner/go.mod" beforeDir="false" afterPath="$GOPATH$/projects/kubemq/demo/frontend/runner/go.mod" afterDir="false" />
     </list>
@@ -48,16 +45,34 @@
         <entry file="file://$PROJECT_DIR$/config.go">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="650">
-              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="552">
+              <caret line="68" selection-start-line="68" selection-end-line="68" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/main.go">
+        <entry file="file://$PROJECT_DIR$/Taskfile.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="552">
-              <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
+            <state relative-caret-position="130">
+              <caret line="5" column="40" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Dockerfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="364">
+              <caret line="14" column="71" selection-start-line="14" selection-start-column="71" selection-end-line="14" selection-end-column="71" />
             </state>
           </provider>
         </entry>
@@ -66,7 +81,7 @@
         <entry file="file://$PROJECT_DIR$/slack.go">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="786">
-              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+              <caret line="32" selection-start-line="32" selection-end-line="32" />
             </state>
           </provider>
         </entry>
@@ -120,6 +135,8 @@
         <option value="$PROJECT_DIR$/.config.yaml" />
         <option value="$PROJECT_DIR$/config.go" />
         <option value="$PROJECT_DIR$/main.go" />
+        <option value="$PROJECT_DIR$/Dockerfile" />
+        <option value="$PROJECT_DIR$/Taskfile.yml" />
       </list>
     </option>
   </component>
@@ -165,6 +182,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Development\bitbucket\go\projects\kubemq\demo\backend\notification" />
       <recent name="D:\Development\projects\kubemq\demo\backend\notification" />
     </key>
   </component>
@@ -182,7 +200,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="3086" height="1702" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25596818" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -243,7 +260,7 @@
     <entry file="file://$PROJECT_DIR$/slack.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="786">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
         </state>
       </provider>
     </entry>
@@ -257,14 +274,28 @@
     <entry file="file://$PROJECT_DIR$/config.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="650">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="552">
-          <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
+          <caret line="68" selection-start-line="68" selection-end-line="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="14" column="71" selection-start-line="14" selection-start-column="71" selection-end-line="14" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Taskfile.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="5" column="40" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="40" />
         </state>
       </provider>
     </entry>
