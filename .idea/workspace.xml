@@ -2,15 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69ae1829-2cd6-4a1d-aca5-d4cbe58b286b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/deployment/docker/graphana.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deployment/docker/prometheus.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/todo.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/notification/slack.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/elastic/elastic.exe" beforeDir="false" afterPath="$PROJECT_DIR$/backend/elastic/elastic.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/elastic/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/backend/elastic/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/notification/.config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/notification/.config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/notification/.idea/watcherTasks.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/notification/.idea/watcherTasks.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/notification/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/notification/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/users/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/users/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deployment/docker/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/deployment/docker/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/identity/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/identity/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/runner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/runner/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/notification/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/notification/config.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/notification/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/backend/notification/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/notification/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/notification/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/redis/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/backend/redis/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/users/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/backend/users/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/users/users.exe" beforeDir="false" afterPath="$PROJECT_DIR$/backend/users/users.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/identity/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/identity/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/runner/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/runner/go.mod" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -84,7 +90,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/deployment/docker/docker-compose.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="2782">
@@ -112,37 +118,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../niobe/go/pkg/mod/github.com/olivere/elastic/v7@v7.0.0/index.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1144">
-              <caret line="44" column="8" selection-start-line="44" selection-start-column="8" selection-end-line="44" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../niobe/go/pkg/mod/github.com/olivere/elastic/v7@v7.0.0/errors.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4342">
-              <caret line="167" column="5" selection-start-line="167" selection-start-column="5" selection-end-line="167" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../niobe/go/pkg/mod/github.com/olivere/elastic/v7@v7.0.0/client.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="14274">
-              <caret line="549" selection-start-line="549" selection-end-line="549" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/run_docker.bat">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="26">
-              <caret line="1" column="143" lean-forward="true" selection-start-line="1" selection-end-line="1" selection-end-column="143" />
+              <caret line="1" column="143" selection-start-line="1" selection-end-line="1" selection-end-column="143" />
             </state>
           </provider>
         </entry>
@@ -156,12 +135,12 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/todo.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="468">
-                <caret line="18" selection-start-line="18" selection-end-line="18" />
+              <first_editor relative-caret-position="364">
+                <caret line="14" selection-start-line="14" selection-end-line="14" />
               </first_editor>
               <second_editor>
                 <markdownNavigatorState />
@@ -220,10 +199,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-14" />
-    <option name="y" value="-14" />
-    <option name="width" value="2154" />
-    <option name="height" value="1168" />
+    <option name="x" value="-15" />
+    <option name="y" value="-15" />
+    <option name="width" value="2155" />
+    <option name="height" value="1169" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -233,6 +212,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -244,6 +224,12 @@
               <item name="demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="demo" type="462c0819:PsiDirectoryNode" />
               <item name="backend" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
+              <item name="notification" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="demo" type="b2602c69:ProjectViewProjectNode" />
@@ -265,7 +251,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -278,7 +263,7 @@
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.vendoring.notification.had.been.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/backend/notification" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
@@ -372,9 +357,9 @@
     </recent_temporary>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1933" height="1053" extended-state="6" />
+    <frame x="-7" y="-7" width="3086" height="1702" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21816228" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22015916" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -384,7 +369,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info active="true" anchor="bottom" id="Docker" order="7" visible="true" weight="0.2900585" />
+      <window_info active="true" anchor="bottom" id="Docker" order="7" visible="true" weight="0.2894911" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32982457" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32982457" />
@@ -449,9 +434,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/922f897c-9397-46e6-bd87-6abd416b13ee/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/922f897c-9397-46e6-bd87-6abd416b13ee/console.sql" />
     <entry file="das://922f897c-9397-46e6-bd87-6abd416b13ee/database/postgres/schema/public/table/users">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -461,13 +444,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/922f897c-9397-46e6-bd87-6abd416b13ee/console_1.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/922f897c-9397-46e6-bd87-6abd416b13ee/console_1.sql" />
     <entry file="file://$PROJECT_DIR$/backend/elastic/go.mod">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
@@ -527,6 +504,9 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$GOPATH$/niobe/go/pkg/mod/github.com/olivere/elastic/v7@v7.0.0/index.go" />
+    <entry file="file://$GOPATH$/niobe/go/pkg/mod/github.com/olivere/elastic/v7@v7.0.0/errors.go" />
+    <entry file="file://$GOPATH$/niobe/go/pkg/mod/github.com/olivere/elastic/v7@v7.0.0/client.go" />
     <entry file="file://$PROJECT_DIR$/deployment/docker/graphana.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3744">
@@ -541,24 +521,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../niobe/go/pkg/mod/github.com/olivere/elastic/v7@v7.0.0/index.go">
+    <entry file="file://$PROJECT_DIR$/run_docker.bat">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1144">
-          <caret line="44" column="8" selection-start-line="44" selection-start-column="8" selection-end-line="44" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../niobe/go/pkg/mod/github.com/olivere/elastic/v7@v7.0.0/errors.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4342">
-          <caret line="167" column="5" selection-start-line="167" selection-start-column="5" selection-end-line="167" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../niobe/go/pkg/mod/github.com/olivere/elastic/v7@v7.0.0/client.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14274">
-          <caret line="549" selection-start-line="549" selection-end-line="549" />
+        <state relative-caret-position="26">
+          <caret line="1" column="143" selection-start-line="1" selection-end-line="1" selection-end-column="143" />
         </state>
       </provider>
     </entry>
@@ -576,29 +542,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/deployment/docker/docker-compose.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2782">
-          <caret line="107" selection-start-line="107" selection-end-line="107" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/run_docker.bat">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="1" column="143" lean-forward="true" selection-start-line="1" selection-end-line="1" selection-end-column="143" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/todo.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="468">
-            <caret line="18" selection-start-line="18" selection-end-line="18" />
+          <first_editor relative-caret-position="364">
+            <caret line="14" selection-start-line="14" selection-end-line="14" />
           </first_editor>
           <second_editor>
             <markdownNavigatorState />
           </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deployment/docker/docker-compose.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2782">
+          <caret line="107" selection-start-line="107" selection-end-line="107" />
         </state>
       </provider>
     </entry>

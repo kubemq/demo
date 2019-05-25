@@ -5,13 +5,13 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	"time"
-
-	"github.com/kubemq-io/kubemq-go"
 	"log"
 	"os"
 	"os/signal"
 	"syscall"
+	"time"
+
+	kubemq "github.com/kubemq-io/kubemq-go"
 )
 
 func PrettyJson(data interface{}) string {
@@ -27,6 +27,7 @@ func PrettyJson(data interface{}) string {
 }
 
 func main() {
+
 	var gracefulShutdown = make(chan os.Signal, 1)
 	signal.Notify(gracefulShutdown, syscall.SIGTERM)
 	signal.Notify(gracefulShutdown, syscall.SIGINT)
@@ -37,7 +38,7 @@ func main() {
 		log.Println("error on loading config file:")
 		log.Fatal(err)
 	}
-
+	s := NewSlack(cfg.SlackToken)
 	kube, err := NewKubeMQClient(cfg.KubeMQHost, cfg.KubeMQPort)
 	if err != nil {
 
@@ -64,7 +65,8 @@ func main() {
 	for {
 		select {
 		case event := <-eventsCh:
-			log.Println(fmt.Sprintf("Notification: \nId: %s\nTime: %s\nType: %s\nContent: %s", event.Id, event.Timestamp, event.Metadata, event.Body))
+			_ = s.SendMessage(cfg.SlackChannel, event.Metadata, fmt.Sprintf("%s", event.Body))
+
 		case err := <-errCh:
 			log.Fatal(err)
 		case <-gracefulShutdown:

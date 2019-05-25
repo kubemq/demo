@@ -2,3 +2,5 @@ kubeMQHost: "localhost"
 kubeMQPort: 50000
 channel: "notification"
 group: ""
+slackToken: "xoxp-493945570944-495734721911-634787957763-a8c9f0afd6426aafbc7380e6e7b22320"
+slackChannel: "#demo"
