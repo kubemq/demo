@@ -1,0 +1,6 @@
+scrape_configs:
+  - job_name: kubemq
+    scrape_interval: 5s
+    static_configs:
+      - targets:
+          - kubemq:8080
