@@ -19,7 +19,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	kube, err := NewKubeMQClient(cfg.KubeMQHost, cfg.KubeMQPort, cfg.LogsChannel)
+	kube, err := NewKubeMQClient(cfg.KubeMQHost, cfg.KubeMQPort, cfg.HistoryChannel)
 	if err != nil {
 		log.Fatal(err)
 	}

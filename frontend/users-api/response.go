@@ -1,9 +1,12 @@
 package main
 
 import (
+	"context"
 	"encoding/json"
 	"fmt"
+	"github.com/google/uuid"
 	"log"
+	"time"
 
 	"runtime"
 
@@ -21,13 +24,27 @@ type Response struct {
 	data     interface{}
 	request  interface{}
 	method   string
+	his      *History
+	kube     *KubeMQ
 }
 
-func NewResponse(c echo.Context) *Response {
+func NewResponse(c echo.Context, mq *KubeMQ, method, requestType string) *Response {
 	res := &Response{
 		c:        c,
 		httpCode: 200,
 		method:   c.Request().URL.Path,
+		his: &History{
+			Id:           uuid.New().String(),
+			Source:       "users-api",
+			Time:         time.Now(),
+			Type:         requestType,
+			Method:       method,
+			Request:      "",
+			Response:     "",
+			IsError:      false,
+			ErrorMessage: "",
+		},
+		kube: mq,
 	}
 	res.setResponseHeaders()
 	return res
@@ -40,6 +57,8 @@ func (res *Response) setResponseHeaders() *Response {
 func (res *Response) SetError(err error) *Response {
 	res.IsError = true
 	res.Message = err.Error()
+	res.his.IsError = true
+	res.his.ErrorMessage = err.Error()
 	return res
 }
 
@@ -51,10 +70,12 @@ func (res *Response) SetErrorWithText(errText string) *Response {
 
 func (res *Response) SetResponseBody(data interface{}) *Response {
 	res.data = data
+	res.his.Response = PrettyJson(data)
 	return res
 }
 func (res *Response) SetRequestBody(data interface{}) *Response {
 	res.request = data
+	res.his.Request = PrettyJson(data)
 	return res
 }
 func (res *Response) SetHttpCode(value int) *Response {
@@ -72,6 +93,7 @@ func (res *Response) Send() error {
 		res.Message = "OK"
 	}
 	log.Println(fmt.Sprintf("New Call Received:\nmethod: %s\nrequest: %sresponse: %smessage: %s", res.method, PrettyJson(res.request), PrettyJson(res.data), res.Message))
+	go res.kube.SendHistory(context.Background(), res.his)
 	return res.c.JSONPretty(res.httpCode, res, "\t")
 }
 

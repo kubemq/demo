@@ -9,11 +9,11 @@ import (
 )
 
 type KubeMQ struct {
-	client      *kubemq.Client
-	logsChannel string
+	client         *kubemq.Client
+	historyChannel string
 }
 
-func NewKubeMQClient(host string, port int, logsChannel string) (*KubeMQ, error) {
+func NewKubeMQClient(host string, port int, historyChannel string) (*KubeMQ, error) {
 	client, err := kubemq.NewClient(context.Background(),
 		kubemq.WithAddress(host, port),
 		kubemq.WithClientId(uuid.New().String()),
@@ -22,16 +22,16 @@ func NewKubeMQClient(host string, port int, logsChannel string) (*KubeMQ, error)
 		return nil, err
 	}
 	k := &KubeMQ{
-		client: client,
+		client:         client,
+		historyChannel: historyChannel,
 	}
 	return k, nil
 }
-func (k *KubeMQ) SendLog(ctx context.Context, source, entry string) error {
+func (k *KubeMQ) SendHistory(ctx context.Context, history *History) error {
 	return k.client.E().
 		SetId(uuid.New().String()).
-		SetMetadata(source).
-		SetBody([]byte(entry)).
-		SetChannel(k.logsChannel).
+		SetBody(history.Data()).
+		SetChannel(k.historyChannel).
 		Send(ctx)
 }
 
