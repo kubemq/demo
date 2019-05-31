@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	"encoding/json"
 	"errors"
 	"fmt"
 	"github.com/kubemq-io/kubemq-go"
@@ -10,16 +11,18 @@ import (
 )
 
 type Processor struct {
-	pq   *Postgres
-	kube *KubeMQ
-	cfg  *Config
+	pq    *Postgres
+	kube  *KubeMQ
+	cfg   *Config
+	cache *Cache
 }
 
 func NewProcessor(ctx context.Context, pq *Postgres, kube *KubeMQ, cfg *Config) *Processor {
 	p := &Processor{
-		pq:   pq,
-		kube: kube,
-		cfg:  cfg,
+		pq:    pq,
+		kube:  kube,
+		cfg:   cfg,
+		cache: NewCahce(kube),
 	}
 	go p.run(ctx)
 	return p
@@ -86,7 +89,7 @@ func (p Processor) run(ctx context.Context) {
 			err = p.kube.SendResponse(ctx, resp)
 			his := &History{
 				Id:           command.Id,
-				Source:       "users_service",
+				Source:       "users-service",
 				Time:         time.Now(),
 				Type:         "query",
 				Method:       command.Metadata,
@@ -125,9 +128,9 @@ func (p Processor) run(ctx context.Context) {
 			err = p.kube.SendResponse(ctx, response)
 			his := &History{
 				Id:           query.Id,
-				Source:       "users_service",
+				Source:       "users-service",
 				Time:         time.Now(),
-				Type:         "query",
+				Type:         "command",
 				Method:       query.Metadata,
 				Request:      fmt.Sprintf("%s", query.Body),
 				Response:     "",
@@ -184,11 +187,19 @@ func (p *Processor) login(ctx context.Context, data []byte) ([]byte, error) {
 	if err != nil {
 		return nil, err
 	}
+	respDataFromCache, err := p.cache.Get(ctx, lr.Name)
+	if err == nil {
+		lr := &LoginResponse{}
+		err := json.Unmarshal(respDataFromCache, lr)
+		fmt.Println(err, lr)
+		return respDataFromCache, nil
+	}
 	resp, err := p.pq.Login(ctx, lr)
 	if err != nil {
 		return nil, err
 	}
 
+	go p.cache.Set(ctx, lr.Name, resp, resp.Expiry)
 	return resp.Data(), nil
 }
 
@@ -197,11 +208,11 @@ func (p *Processor) logout(ctx context.Context, data []byte) error {
 	if err != nil {
 		return err
 	}
-	_, err = p.pq.Logout(ctx, lr)
+	logoutResp, err := p.pq.Logout(ctx, lr)
 	if err != nil {
 		return err
 	}
-
+	go p.cache.Del(ctx, logoutResp.Name)
 	return nil
 }
 

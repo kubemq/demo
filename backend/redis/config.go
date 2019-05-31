@@ -5,12 +5,12 @@ import (
 )
 
 type Config struct {
-	RedisAddress string
-	KubeMQHost   string
-	KubeMQPort   int
-	Channel      string
-	Group        string
-	LogsChannel  string
+	RedisAddress   string
+	KubeMQHost     string
+	KubeMQPort     int
+	Channel        string
+	Group          string
+	HistoryChannel string
 }
 
 func LoadConfig() (*Config, error) {
@@ -22,7 +22,7 @@ func LoadConfig() (*Config, error) {
 	viper.BindEnv("KubeMQPort", "KUBEMQ_POST")
 	viper.BindEnv("Channel", "CHANNEL")
 	viper.BindEnv("Group", "GROUP")
-	viper.BindEnv("LogsChannel", "LOGS_CHANNEL")
+	viper.BindEnv("HistoryChannel", "HISTORY_CHANNEL")
 
 	err := viper.ReadInConfig()
 	if err != nil {

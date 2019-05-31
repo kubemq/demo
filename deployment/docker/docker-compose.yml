@@ -43,9 +43,9 @@ services:
       - elasticsearch
     networks:
       - backend
-  kubemq-elastic:
-    image: kubemq/kubemq-elastic:v0.1.0
-    container_name: kubemq-elastic
+  kubemq-history-service:
+    image: kubemq/kubemq-elastic:v0.2.0
+    container_name: kubemq-history-service
     environment:
       ELASTIC_ADDRESS: http://elasticsearch:9200/
       KUBEMQ_HOST: kubemq
@@ -63,21 +63,37 @@ services:
       - "6379:6379"
     networks:
       - backend
-  kubemq-slack-notification:
+  kubemq-cache-service:
+    image: kubemq/kubemq-redis:v0.2.0
+    container_name: kubemq-cache-service
+    environment:
+      REDIS_ADDRESS: "redis:6379"
+      KUBEMQ_HOST: kubemq
+      KUBEMQ_POST: 50000
+      CHANNEL: "cache"
+      GROUP: ""
+      HISTORY_CHANNEL: "history"
+    depends_on:
+      - kubemq
+      - redis
+    networks:
+      - backend
+  kubemq-notification-service:
       image: kubemq/kubemq-slack-notification:v0.1.0
-      container_name: kubemq-slack-notification
+      container_name: kubemq-notification-service
       environment:
         KUBEMQ_HOST: kubemq
         KUBEMQ_POST: 50000
         CHANNEL: "notification"
         GROUP: ""
+        SLACK_TOKEN: xoxp-493945570944-495734721911-650924474919-d4773a8f67aa23c08e270cfde2b68187
       depends_on:
         - kubemq
       networks:
         - backend
-  kubemq-users:
-    image: kubemq/kubemq-users:v0.1.0
-    container_name: kubemq-users
+  kubemq-users-service:
+    image: kubemq/kubemq-users:v0.2.2
+    container_name: kubemq-users-service
     environment:
       POSTGRES_HOST: postgres
       POSTGRES_PORT: 5432
@@ -101,7 +117,7 @@ services:
     networks:
       - backend
   kubemq-users-api:
-    image: kubemq/kubemq-users-api:v0.1.0
+    image: kubemq/kubemq-users-api:v0.2.0
     container_name: kubemq-users-api
     environment:
       PORT: 80
@@ -122,16 +138,16 @@ services:
       - kubemq
     networks:
       - frontend
-  kubemq-demo-runner:
-    image: kubemq/kubemq-demo-runner:v0.1.0
-    container_name: kubemq-demo-runner
-    environment:
-      API_ADDRESS: http://kubemq-users-api:80
-      INTERVAL: 15
-    depends_on:
-      - kubemq-users-api
-    networks:
-      - frontend
+#  kubemq-demo-runner:
+#    image: kubemq/kubemq-demo-runner:v0.1.0
+#    container_name: kubemq-demo-runner
+#    environment:
+#      API_ADDRESS: http://kubemq-users-api:80
+#      INTERVAL: 15
+#    depends_on:
+#      - kubemq-users-api
+#    networks:
+#      - frontend
   postgres:
     image: postgres
     container_name: postgres
@@ -143,27 +159,27 @@ services:
       - backend
     volumes:
       - postgress_vol:/var/lib/postgresql/data
-  prometheus:
-    image: prom/prometheus:latest
-    container_name: prometheus
-    ports:
-      - 9080:9090
-    command:
-      - --config.file=/etc/prometheus/prometheus.yml
-    volumes:
-      - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
-    networks:
-      - backend
-  grafana:
-    image: grafana/grafana:latest
-    environment:
-      - GF_SECURITY_ADMIN_PASSWORD=pass
-    depends_on:
-      - prometheus
-    ports:
-      - "3000:3000"
-    networks:
-      - backend
+#  prometheus:
+#    image: prom/prometheus:latest
+#    container_name: prometheus
+#    ports:
+#      - 9080:9090
+#    command:
+#      - --config.file=/etc/prometheus/prometheus.yml
+#    volumes:
+#      - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
+#    networks:
+#      - backend
+#  grafana:
+#    image: grafana/grafana:latest
+#    environment:
+#      - GF_SECURITY_ADMIN_PASSWORD=pass
+#    depends_on:
+#      - prometheus
+#    ports:
+#      - "3000:3000"
+#    networks:
+#      - backend
 networks:
   backend:
   frontend:

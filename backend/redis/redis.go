@@ -3,6 +3,7 @@ package main
 import (
 	"errors"
 	"github.com/go-redis/redis"
+	"time"
 )
 
 type RedisMetadata struct {
@@ -30,8 +31,8 @@ func NewRedisClient(url string) (*Redis, error) {
 	}
 	return r, nil
 }
-func (r *Redis) Set(key string, value []byte) error {
-	err := r.client.Set(key, value, 0).Err()
+func (r *Redis) Set(key string, value []byte, exp time.Time) error {
+	err := r.client.Set(key, value, exp.Sub(time.Now())).Err()
 	if err != nil {
 		return err
 	}
@@ -47,5 +48,17 @@ func (r *Redis) Get(key string) ([]byte, error) {
 		return nil, err
 	}
 	return []byte(result), nil
+
+}
+func (r *Redis) Del(key string) error {
+	_, err := r.client.Del(key).Result()
+	if err == redis.Nil {
+		return errors.New("key not found")
+	}
+	if err != nil {
+		return err
+	}
+
+	return nil
 
 }

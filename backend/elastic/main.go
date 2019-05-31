@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"encoding/json"
+	"github.com/google/uuid"
 	"time"
 
 	"github.com/kubemq-io/kubemq-go"
@@ -40,7 +41,17 @@ func main() {
 			break
 		}
 	}
-
+	el.Save(context.Background(),&History{
+		Id:           uuid.New().String(),
+		Source:       "history-service",
+		Time:         time.Now(),
+		Type:         "event",
+		Method:       "init",
+		Request:      "start history service",
+		Response:     "",
+		IsError:      false,
+		ErrorMessage: "",
+	})
 
 	kube, err := NewKubeMQClient(cfg.KubeMQHost, cfg.KubeMQPort)
 	if err != nil {

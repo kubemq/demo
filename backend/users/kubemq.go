@@ -2,10 +2,12 @@ package main
 
 import (
 	"context"
+	"errors"
 	"fmt"
 	"github.com/google/uuid"
 	"github.com/kubemq-io/kubemq-go"
 	"log"
+	"time"
 )
 
 type KubeMQ struct {
@@ -87,6 +89,7 @@ func (k *KubeMQ) SendResponse(ctx context.Context, response *kubemq.Response) er
 }
 
 func (k *KubeMQ) SendToHistory(ctx context.Context, his *History) {
+
 	err := k.client.E().SetChannel(k.cfg.HistoryChannel).SetId(his.Id).SetBody(his.Data()).SetMetadata(his.Method).Send(ctx)
 	if err != nil {
 		log.Println(fmt.Sprintf("error sending to history, error: %s", err.Error()))
@@ -101,6 +104,27 @@ func (k *KubeMQ) SendToNotification(ctx context.Context, metadata string, data [
 	}
 	log.Println(fmt.Sprintf("sending to notification, sent: %t, data: %s", res.Sent, data))
 
+}
+
+func (k *KubeMQ) SendCommandToCache(ctx context.Context, cm *CacheMessage) error {
+	cr, err := k.client.C().SetChannel(k.cfg.CacheChannel).SetId(uuid.New().String()).SetBody(cm.Data()).SetTimeout(1 * time.Second).Send(ctx)
+	if err != nil {
+		return err
+	}
+	if !cr.Executed {
+		return errors.New(cr.Error)
+	}
+	return nil
+}
+func (k *KubeMQ) SendQueryToCache(ctx context.Context, cm *CacheMessage) ([]byte, error) {
+	qr, err := k.client.Q().SetChannel(k.cfg.CacheChannel).SetId(uuid.New().String()).SetBody(cm.Data()).SetTimeout(1 * time.Second).Send(ctx)
+	if err != nil {
+		return nil, err
+	}
+	if !qr.Executed {
+		return nil, errors.New(qr.Error)
+	}
+	return qr.Body, nil
 }
 func (k *KubeMQ) Close() {
 	_ = k.client.Close()

@@ -101,7 +101,6 @@ func getLoginRequest(data []byte) (*LoginRequest, error) {
 
 type LoginResponse struct {
 	UserId string    `json:"user_id"`
-	Token  string    `json:"token"`
 	Expiry time.Time `json:"expiry"`
 }
 
@@ -124,6 +123,7 @@ func getLogoutRequest(data []byte) (*LogoutRequest, error) {
 }
 
 type LogoutResponse struct {
+	Name   string `json:"name"`
 	UserId string `json:"user_id"`
 	Token  string `json:"token"`
 }

@@ -15,21 +15,16 @@ import (
 	"syscall"
 )
 
-type RedisLog struct {
-	ID       string `json:"id"`
-	CreateAt time.Time
-	Command  string `json:"command"`
-	Key      string `json:"key"`
-	Value    string `json:"value"`
-	Result   string `json:"result"`
-}
+func PrettyJson(data interface{}) string {
+	buffer := new(bytes.Buffer)
+	encoder := json.NewEncoder(buffer)
+	encoder.SetIndent("", "\t")
 
-func (rl *RedisLog) String() string {
-	data, _ := json.Marshal(rl)
-	var buff *bytes.Buffer
-	_ = json.Indent(buff, data, "", "\t")
-
-	return buff.String()
+	err := encoder.Encode(data)
+	if err != nil {
+		return ""
+	}
+	return buffer.String()
 }
 
 func main() {
@@ -54,7 +49,7 @@ func main() {
 		}
 	}
 
-	kube, err := NewKubeMQClient(cfg.KubeMQHost, cfg.KubeMQPort, cfg.LogsChannel)
+	kube, err := NewKubeMQClient(cfg.KubeMQHost, cfg.KubeMQPort, cfg.HistoryChannel)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -90,14 +85,29 @@ func main() {
 	for {
 		select {
 		case command := <-commandsCh:
-			log.Println(fmt.Sprintf("redis Set command received - Key: %s, Value: %s", command.Metadata, string(command.Body)))
-			err := redis.Set(command.Metadata, command.Body)
+
 			resp := &kubemq.Response{
 				RequestId:  command.Id,
 				ResponseTo: command.ResponseTo,
 				Metadata:   command.Metadata,
 				Body:       nil,
 			}
+			cm, err := NewCacheMessage(command.Body)
+			if err != nil {
+				log.Printf("error on parsing of cache command: %s\n", err.Error())
+				continue
+			}
+			switch cm.Type {
+			case "set":
+
+				err = redis.Set(cm.Key, cm.Value, cm.Expiry)
+			case "del":
+				err = redis.Del(cm.Key)
+			default:
+				log.Printf("invalid cache command: %s\n", cm.Type)
+				continue
+			}
+			log.Println(fmt.Sprintf("cache command received - Type: %s Key: %s, Value: %s", cm.Type, cm.Key, PrettyJson(cm.Value)))
 			if err != nil {
 				log.Printf("error on sending command to redis: %s\n", err.Error())
 				resp.Err = err
@@ -110,29 +120,43 @@ func main() {
 				log.Printf("error on sending response from redis: %s\n", err.Error())
 
 			}
-			rl := &RedisLog{
-				ID:       uuid.New().String(),
-				CreateAt: time.Now(),
-				Command:  "Set",
-				Key:      command.Metadata,
-				Value:    string(command.Body),
-				Result:   "",
+			his := &History{
+				Id:           uuid.New().String(),
+				Source:       "cache-service",
+				Time:         time.Now(),
+				Type:         "command",
+				Method:       cm.Type,
+				Request:      PrettyJson(cm.Value),
+				Response:     "",
+				IsError:      false,
+				ErrorMessage: "",
 			}
-			if resp.Err != nil {
-				rl.Result = resp.Err.Error()
-			} else {
-				rl.Result = "ok"
+			if err != nil {
+				his.IsError = true
+				his.ErrorMessage = err.Error()
 			}
-			err = kube.SendLog(ctx, "redis", rl.String())
-			log.Println("redis Set command completed")
+			go kube.SendHistory(ctx, his)
 		case query := <-queriesCh:
-			log.Println(fmt.Sprintf("redis Get command received - Key: %s", query.Metadata))
-			result, err := redis.Get(query.Metadata)
+
 			resp := &kubemq.Response{
 				RequestId:  query.Id,
 				ResponseTo: query.ResponseTo,
 				Metadata:   query.Metadata,
 			}
+			cm, err := NewCacheMessage(query.Body)
+			if err != nil {
+				log.Printf("error on parsing of cache command: %s\n", err.Error())
+				continue
+			}
+			var result []byte
+			switch cm.Type {
+			case "get":
+				result, err = redis.Get(cm.Key)
+			default:
+				log.Printf("invalid cache command: %s\n", cm.Type)
+				continue
+			}
+			log.Println(fmt.Sprintf("cache query received - Type: %s Key: %s", cm.Type, cm.Key))
 			if err != nil {
 				log.Printf("error on sending command to redis: %s\n", err.Error())
 				resp.Err = err
@@ -146,20 +170,22 @@ func main() {
 				log.Printf("error on sending response from redis: %s\n", err.Error())
 
 			}
-			rl := &RedisLog{
-				ID:       uuid.New().String(),
-				CreateAt: time.Now(),
-				Command:  "Get",
-				Key:      query.Metadata,
-				Value:    string(resp.Body),
-				Result:   "",
+			his := &History{
+				Id:           uuid.New().String(),
+				Source:       "cache-service",
+				Time:         time.Now(),
+				Type:         "query",
+				Method:       cm.Type,
+				Request:      PrettyJson(cm.Key),
+				Response:     PrettyJson(result),
+				IsError:      false,
+				ErrorMessage: "",
 			}
-			if resp.Err != nil {
-				rl.Result = resp.Err.Error()
-			} else {
-				rl.Result = "ok"
+			if err != nil {
+				his.IsError = true
+				his.ErrorMessage = err.Error()
 			}
-			log.Println(fmt.Sprintf("redis Get command completed with Value: %s", string(result)))
+			go kube.SendHistory(ctx, his)
 		case err := <-errCh:
 			log.Fatal(err)
 		case <-gracefulShutdown:

@@ -146,7 +146,6 @@ func (pq *Postgres) Login(ctx context.Context, loginRequest *LoginRequest) (*Log
 	}
 	lt := &LoginResponse{
 		UserId: login.UserId,
-		Token:  login.Token,
 		Expiry: login.ExpireAt,
 	}
 	return lt, nil
@@ -167,6 +166,7 @@ func (pq *Postgres) Logout(ctx context.Context, logoutRequest *LogoutRequest) (*
 	if exist == nil {
 		_, err = pq.db.ExecContext(ctx, "DELETE FROM logins  WHERE user_id=$1", logoutRequest.UserId)
 		return &LogoutResponse{
+			Name:   u.Name,
 			UserId: logoutRequest.UserId,
 			Token:  login.Token,
 		}, nil
