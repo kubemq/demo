@@ -92,7 +92,7 @@ services:
       networks:
         - backend
   kubemq-users-service:
-    image: kubemq/kubemq-users:v0.2.2
+    image: kubemq/kubemq-users:v0.2.3
     container_name: kubemq-users-service
     environment:
       POSTGRES_HOST: postgres
@@ -117,7 +117,7 @@ services:
     networks:
       - backend
   kubemq-users-api:
-    image: kubemq/kubemq-users-api:v0.2.0
+    image: kubemq/kubemq-users-api:v0.2.1
     container_name: kubemq-users-api
     environment:
       PORT: 80

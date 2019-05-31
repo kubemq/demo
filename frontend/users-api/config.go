@@ -20,7 +20,7 @@ func LoadConfig() (*Config, error) {
 	cfg := &Config{}
 	viper.AddConfigPath("./")
 	viper.SetConfigName(".config")
-	viper.BindEnv("Port", "Port")
+	viper.BindEnv("Port", "PORT")
 	viper.BindEnv("KubeMQHost", "KUBEMQ_HOST")
 	viper.BindEnv("KubeMQPort", "KUBEMQ_POST")
 	viper.BindEnv("UsersChannel", "USERS_CHANNEL")

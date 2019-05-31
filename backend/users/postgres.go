@@ -91,7 +91,6 @@ func (pq *Postgres) Register(ctx context.Context, newUser *NewUser) (*User, erro
 		return nil, errors.New("user created but not found")
 	}
 	u.Password = ""
-	u.Id = ""
 	return u, nil
 }
 
