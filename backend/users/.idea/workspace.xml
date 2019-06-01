@@ -2,18 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c917aa18-abb5-40c7-8e63-7f73bd7afc65" name="Default Changelist" comment="">
-      <change beforePath="$GOPATH$/projects/kubemq/demo/.idea/markdown-navigator/profiles_settings.xml" beforeDir="false" afterPath="$GOPATH$/projects/kubemq/demo/.idea/markdown-navigator/profiles_settings.xml" afterDir="false" />
       <change beforePath="$GOPATH$/projects/kubemq/demo/.idea/workspace.xml" beforeDir="false" afterPath="$GOPATH$/projects/kubemq/demo/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$GOPATH$/projects/kubemq/demo/backend/redis/.idea/workspace.xml" beforeDir="false" afterPath="$GOPATH$/projects/kubemq/demo/backend/redis/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/markdown-navigator/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/markdown-navigator/profiles_settings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Taskfile.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Taskfile.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/postgres.go" beforeDir="false" afterPath="$PROJECT_DIR$/postgres.go" afterDir="false" />
-      <change beforePath="$GOPATH$/projects/kubemq/demo/deployment/docker/docker-compose.yml" beforeDir="false" afterPath="$GOPATH$/projects/kubemq/demo/deployment/docker/docker-compose.yml" afterDir="false" />
-      <change beforePath="$GOPATH$/projects/kubemq/demo/frontend/users-api/.idea/markdown-navigator/profiles_settings.xml" beforeDir="false" afterPath="$GOPATH$/projects/kubemq/demo/frontend/users-api/.idea/markdown-navigator/profiles_settings.xml" afterDir="false" />
       <change beforePath="$GOPATH$/projects/kubemq/demo/frontend/users-api/.idea/workspace.xml" beforeDir="false" afterPath="$GOPATH$/projects/kubemq/demo/frontend/users-api/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$GOPATH$/projects/kubemq/demo/frontend/users-api/Taskfile.yml" beforeDir="false" afterPath="$GOPATH$/projects/kubemq/demo/frontend/users-api/Taskfile.yml" afterDir="false" />
-      <change beforePath="$GOPATH$/projects/kubemq/demo/frontend/users-api/config.go" beforeDir="false" afterPath="$GOPATH$/projects/kubemq/demo/frontend/users-api/config.go" afterDir="false" />
+      <change beforePath="$GOPATH$/projects/kubemq/demo/frontend/users-api/web/users/src/app/user/login/login.component.ts" beforeDir="false" afterPath="$GOPATH$/projects/kubemq/demo/frontend/users-api/web/users/src/app/user/login/login.component.ts" afterDir="false" />
+      <change beforePath="$GOPATH$/projects/kubemq/demo/frontend/users-api/web/users/src/app/user/logout/logout.component.ts" beforeDir="false" afterPath="$GOPATH$/projects/kubemq/demo/frontend/users-api/web/users/src/app/user/logout/logout.component.ts" afterDir="false" />
+      <change beforePath="$GOPATH$/projects/kubemq/demo/frontend/users-api/web/users/src/app/user/register/register.component.ts" beforeDir="false" afterPath="$GOPATH$/projects/kubemq/demo/frontend/users-api/web/users/src/app/user/register/register.component.ts" afterDir="false" />
+      <change beforePath="$GOPATH$/projects/kubemq/demo/frontend/users-api/web/users/src/app/user/verify/verify.component.ts" beforeDir="false" afterPath="$GOPATH$/projects/kubemq/demo/frontend/users-api/web/users/src/app/user/verify/verify.component.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -361,7 +356,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="3086" height="1702" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19363396" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
