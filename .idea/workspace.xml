@@ -1,83 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="69ae1829-2cd6-4a1d-aca5-d4cbe58b286b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/users-web/.config.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/users-web/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/users-web/.idea/markdown-navigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/users-web/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/users-web/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/users-web/.idea/users-web.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/users-web/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/users-web/.idea/watcherTasks.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/users-web/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/users-web/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/users-web/Taskfile.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/users-web/config.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/users-web/go.mod" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/users-web/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/users-web/web/users/src/app/env.service.provider.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/users-web/web/users/src/assets/config/production.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/users-web/web/users/src/env.js" afterDir="false" />
+    <list default="true" id="69ae1829-2cd6-4a1d-aca5-d4cbe58b286b" name="Default Changelist" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/users/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/users/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/notification/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/backend/notification/go.mod" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/deployment/docker/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/deployment/docker/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/users-api/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/users-api/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/users-api/web/users/.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/users-api/web/users/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/users-api/web/users/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/users-api/web/users/angular.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/users-api/web/users/browserslist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/users-api/web/users/e2e/protractor.conf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/users-api/web/users/e2e/src/app.e2e-spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/users-api/web/users/e2e/src/app.po.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/users-api/web/users/e2e/tsconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/users-api/web/users/karma.conf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/users-api/web/users/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/users-api/web/users/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/users-api/web/users/src/app/app-routing.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/users-api/web/users/src/app/app.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/users-api/web/users/src/app/app.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/users-api/web/users/src/app/app.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/users-api/web/users/src/app/app.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/users-api/web/users/src/app/app.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/users-api/web/users/src/app/shared/user.model.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/users-api/web/users/src/app/shared/user.model.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/users-api/web/users/src/app/shared/users-api.service.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/users-api/web/users/src/app/shared/users-api.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/users-api/web/users/src/app/user/login/login.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/users-api/web/users/src/app/user/login/login.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/users-api/web/users/src/app/user/login/login.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/users-api/web/users/src/app/user/login/login.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/users-api/web/users/src/app/user/logout/logout.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/users-api/web/users/src/app/user/logout/logout.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/users-api/web/users/src/app/user/logout/logout.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/users-api/web/users/src/app/user/logout/logout.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/users-api/web/users/src/app/user/register/register.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/users-api/web/users/src/app/user/register/register.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/users-api/web/users/src/app/user/register/register.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/users-api/web/users/src/app/user/register/register.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/users-api/web/users/src/app/user/user.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/users-api/web/users/src/app/user/user.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/users-api/web/users/src/app/user/user.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/users-api/web/users/src/app/user/user.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/users-api/web/users/src/app/user/verify/verify.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/users-api/web/users/src/app/user/verify/verify.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/users-api/web/users/src/app/user/verify/verify.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/users-api/web/users/src/app/user/verify/verify.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/users-api/web/users/src/assets/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/users-api/web/users/src/environments/environment.prod.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/users-api/web/users/src/environments/environment.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/users-api/web/users/src/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/users-api/web/users/src/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/users-api/web/users/src/main.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/users-api/web/users/src/polyfills.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/users-api/web/users/src/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/users-api/web/users/src/test.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/users-api/web/users/tsconfig.app.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/users-api/web/users/tsconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/users-api/web/users/tsconfig.spec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/users-api/web/users/tslint.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/runner/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/runner/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/users-api/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/users-api/go.mod" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -150,136 +79,99 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/deployment/docker/docker-compose.yml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="603">
-                  <caret line="148" column="24" selection-start-line="148" selection-start-column="24" selection-end-line="148" selection-end-column="24" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/frontend/users-web/Taskfile.yml">
-              <provider selected="true" editor-type-id="text-editor" />
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/frontend/users-web/go.mod">
-              <provider selected="true" editor-type-id="text-editor" />
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/backend/users/.config.yaml">
-              <provider selected="true" editor-type-id="text-editor" />
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/backend/redis/history.go">
-              <provider selected="true" editor-type-id="text-editor" />
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/backend/redis/config.go">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="312">
-                  <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/todo.md">
-              <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-                <state split_layout="SPLIT">
-                  <first_editor relative-caret-position="364">
-                    <caret line="14" selection-start-line="14" selection-end-line="14" />
-                  </first_editor>
-                  <second_editor>
-                    <markdownNavigatorState />
-                  </second_editor>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/backend/redis/kubemq.go">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="260">
-                  <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/backend/users/config.go">
-              <provider selected="true" editor-type-id="text-editor" />
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/backend/elastic/main.go">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1118">
-                  <caret line="43" column="4" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="4" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/backend/users/.config.yaml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="104">
-                  <caret line="4" column="21" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="21" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/frontend/runner/.config.yaml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state>
-                  <caret column="32" selection-start-column="13" selection-end-column="32" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/backend/users/config.go">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1066">
-                  <caret line="41" column="62" selection-start-line="41" selection-start-column="42" selection-end-line="41" selection-end-column="62" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/frontend/users-api/.config.yaml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="208">
-                  <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/backend/redis/.config.yaml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state>
-                  <caret column="12" selection-end-column="12" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/deployment/docker/docker-compose.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="416">
+              <caret line="16" column="25" lean-forward="true" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backend/notification/config.go">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backend/elastic/elastic.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1430">
+              <caret line="55" column="33" selection-start-line="55" selection-start-column="33" selection-end-line="55" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../niobe/go/pkg/mod/github.com/olivere/elastic/v7@v7.0.0/index.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1144">
+              <caret line="44" column="8" selection-start-line="44" selection-start-column="8" selection-end-line="44" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../niobe/go/pkg/mod/github.com/olivere/elastic/v7@v7.0.0/errors.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4342">
+              <caret line="167" column="5" selection-start-line="167" selection-start-column="5" selection-end-line="167" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../niobe/go/pkg/mod/github.com/olivere/elastic/v7@v7.0.0/client.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="14274">
+              <caret line="549" selection-start-line="549" selection-end-line="549" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/run_docker.bat">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="26">
+              <caret line="1" column="143" selection-start-line="1" selection-end-line="1" selection-end-column="143" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/deployment/docker/prometheus.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="130">
+              <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/todo.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="390">
+                <caret line="18" selection-start-line="18" selection-end-line="18" />
+              </first_editor>
+              <second_editor>
+                <markdownNavigatorState />
+              </second_editor>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backend/elastic/main.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1092">
+              <caret line="42" selection-start-line="42" selection-end-line="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -303,6 +195,7 @@
         <option value="$PROJECT_DIR$/backend/elastic/main.go" />
         <option value="$PROJECT_DIR$/backend/redis/redis.go" />
         <option value="$PROJECT_DIR$/backend/redis/main.go" />
+        <option value="$PROJECT_DIR$/backend/redis/.config.yaml" />
         <option value="$PROJECT_DIR$/backend/elastic/run.bat" />
         <option value="$PROJECT_DIR$/run_elastic.bat" />
         <option value="$PROJECT_DIR$/run_notification.bat" />
@@ -315,18 +208,14 @@
         <option value="$PROJECT_DIR$/todo.md" />
         <option value="$PROJECT_DIR$/run_docker.bat" />
         <option value="$PROJECT_DIR$/frontend/runner/Taskfile.yml" />
-        <option value="$PROJECT_DIR$/backend/redis/.config.yaml" />
-        <option value="$PROJECT_DIR$/backend/redis/config.go" />
-        <option value="$PROJECT_DIR$/backend/redis/kubemq.go" />
-        <option value="$PROJECT_DIR$/frontend/users-web/go.mod" />
         <option value="$PROJECT_DIR$/deployment/docker/docker-compose.yml" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-15" />
-    <option name="y" value="-15" />
-    <option name="width" value="2155" />
+    <option name="x" value="-16" />
+    <option name="y" value="-16" />
+    <option name="width" value="2156" />
     <option name="height" value="1170" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -337,13 +226,23 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="demo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
+              <item name="notification" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="demo" type="b2602c69:ProjectViewProjectNode" />
@@ -356,10 +255,16 @@
               <item name="deployment" type="462c0819:PsiDirectoryNode" />
               <item name="docker" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -372,19 +277,13 @@
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.vendoring.notification.had.been.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/frontend/users-web" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Development\bitbucket\go\projects\kubemq\demo\frontend\users-web" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Development\bitbucket\go\projects\kubemq\demo\frontend\users-web" />
-      <recent name="D:\Development\bitbucket\go\projects\kubemq\demo\backend\redis" />
       <recent name="D:\Development\bitbucket\go\projects\kubemq\demo\frontend\runner" />
       <recent name="D:\Development\projects\kubemq\demo" />
     </key>
@@ -401,10 +300,36 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Docker.docker.kubemq-users-web: Compose Deployment">
+  <component name="RunManager" selected="Docker.docker: Compose Deployment">
     <configuration name="docker: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
+          <option name="sourceFilePath" value="deployment/docker/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker.kubemq-demo-runner: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="kubemq-demo-runner" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="deployment/docker/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker.kubemq-elastic: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="kubemq-elastic" />
+            </list>
+          </option>
           <option name="sourceFilePath" value="deployment/docker/docker-compose.yml" />
         </settings>
       </deployment>
@@ -416,32 +341,6 @@
           <option name="services">
             <list>
               <option value="kubemq-users-api" />
-            </list>
-          </option>
-          <option name="sourceFilePath" value="deployment/docker/docker-compose.yml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
-    <configuration name="docker.kubemq-users-service: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="services">
-            <list>
-              <option value="kubemq-users-service" />
-            </list>
-          </option>
-          <option name="sourceFilePath" value="deployment/docker/docker-compose.yml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
-    <configuration name="docker.kubemq-users-web: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="services">
-            <list>
-              <option value="kubemq-users-web" />
             </list>
           </option>
           <option name="sourceFilePath" value="deployment/docker/docker-compose.yml" />
@@ -464,47 +363,28 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Docker.docker.kubemq-users-web: Compose Deployment" />
-        <item itemvalue="Docker.docker.kubemq-users-api: Compose Deployment" />
         <item itemvalue="Docker.docker: Compose Deployment" />
-        <item itemvalue="Docker.docker.kubemq-users-service: Compose Deployment" />
+        <item itemvalue="Docker.docker.kubemq-demo-runner: Compose Deployment" />
+        <item itemvalue="Docker.docker.kubemq-users-api: Compose Deployment" />
         <item itemvalue="Docker.docker.kubemq-users: Compose Deployment" />
+        <item itemvalue="Docker.docker.kubemq-elastic: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
-  <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="69ae1829-2cd6-4a1d-aca5-d4cbe58b286b" name="Default Changelist" comment="" />
-      <created>1559296093061</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1559296093061</updated>
-    </task>
-    <task id="LOCAL-00001" summary="add frontend web angular">
-      <created>1559309359163</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1559309359163</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
-    <servers />
-  </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="3086" height="1702" extended-state="6" />
+    <frame x="-6" y="-6" width="1933" height="1053" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22413793" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22138636" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Missing In Actions" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32977304" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32843792" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32982457" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3287037" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info active="true" anchor="bottom" id="Docker" order="7" visible="true" weight="0.28905207" />
+      <window_info active="true" anchor="bottom" id="Docker" order="7" visible="true" weight="0.2888889" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32982457" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32982457" />
@@ -529,16 +409,26 @@
     <MESSAGE value="adding users service with postgres" />
     <MESSAGE value="adding services" />
     <MESSAGE value="create slack notification service" />
-    <MESSAGE value="complete dockerize all apps" />
-    <MESSAGE value="users-api - sending history to elastic" />
-    <MESSAGE value="complete demo" />
-    <MESSAGE value="add frontend web angular" />
-    <option name="LAST_COMMIT_MESSAGE" value="add frontend web angular" />
+    <option name="LAST_COMMIT_MESSAGE" value="create slack notification service" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/backend/redis/.config.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="4" column="9" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/redis/kubemq.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1872">
+          <caret line="81" column="17" selection-start-line="81" selection-start-column="17" selection-end-line="81" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/backend/redis/redis.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
@@ -636,6 +526,26 @@
     <entry file="file://$PROJECT_DIR$/frontend/runner/Taskfile.yml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/backend/users/.config.yaml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/users-api/.config.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/runner/.config.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="32" selection-start-column="13" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/users/config.go">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/deployment/docker/graphana.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3744">
@@ -650,17 +560,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/deployment/docker/prometheus.yml">
+    <entry file="file://$PROJECT_DIR$/../../../niobe/go/pkg/mod/github.com/olivere/elastic/v7@v7.0.0/index.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+        <state relative-caret-position="1144">
+          <caret line="44" column="8" selection-start-line="44" selection-start-column="8" selection-end-line="44" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/users-api/kubemq.go">
+    <entry file="file://$PROJECT_DIR$/../../../niobe/go/pkg/mod/github.com/olivere/elastic/v7@v7.0.0/errors.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="36" lean-forward="true" selection-start-line="29" selection-end-line="36" />
+        <state relative-caret-position="4342">
+          <caret line="167" column="5" selection-start-line="167" selection-start-column="5" selection-end-line="167" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../niobe/go/pkg/mod/github.com/olivere/elastic/v7@v7.0.0/client.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14274">
+          <caret line="549" selection-start-line="549" selection-end-line="549" />
         </state>
       </provider>
     </entry>
@@ -671,21 +588,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/redis/history.go">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/redis/config.go">
+    <entry file="file://$PROJECT_DIR$/deployment/docker/prometheus.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+        <state relative-caret-position="130">
+          <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/elastic/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1092">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/todo.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="364">
-            <caret line="14" selection-start-line="14" selection-end-line="14" />
+          <first_editor relative-caret-position="390">
+            <caret line="18" selection-start-line="18" selection-end-line="18" />
           </first_editor>
           <second_editor>
             <markdownNavigatorState />
@@ -693,57 +614,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/redis/kubemq.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/elastic/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1118">
-          <caret line="43" column="4" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/users/.config.yaml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/runner/.config.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="32" selection-start-column="13" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/users/config.go">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/users-api/.config.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/redis/.config.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="12" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/users-web/Taskfile.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/users-web/go.mod">
+    <entry file="file://$PROJECT_DIR$/backend/notification/config.go">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/deployment/docker/docker-compose.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="603">
-          <caret line="148" column="24" selection-start-line="148" selection-start-column="24" selection-end-line="148" selection-end-column="24" />
+        <state relative-caret-position="416">
+          <caret line="16" column="25" lean-forward="true" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
         </state>
       </provider>
     </entry>
