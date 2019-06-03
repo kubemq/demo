@@ -4,7 +4,7 @@ version: '2'
 
 vars:
   BINARY_NAME: kubemq-users-api
-  VERSION: v0.2.1
+  VERSION: v0.2.2
 
 tasks:
   default:

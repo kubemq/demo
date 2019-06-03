@@ -27,7 +27,7 @@ func LoadConfig() (*Config, error) {
 	viper.BindEnv("CacheChannel", "CACHE_CHANNEL")
 	viper.BindEnv("AuditChannel", "AUDIT_CHANNEL")
 	viper.BindEnv("HistoryChannel", "HISTORY_CHANNEL")
-	viper.BindEnv("HistoryChannel", "LOGS_CHANNEL")
+	viper.BindEnv("LogsChannel", "LOGS_CHANNEL")
 	viper.BindEnv("ConfigChannel", "CONFIG_CHANNEL")
 
 	err := viper.ReadInConfig()

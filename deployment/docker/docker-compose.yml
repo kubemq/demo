@@ -92,7 +92,7 @@ services:
       networks:
         - backend
   kubemq-users-service:
-    image: kubemq/kubemq-users:v0.2.3
+    image: kubemq/kubemq-users:v0.2.4
     container_name: kubemq-users-service
     environment:
       POSTGRES_HOST: postgres
