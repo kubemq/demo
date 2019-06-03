@@ -139,7 +139,7 @@ services:
     networks:
       - frontend
   kubemq-users-web:
-    image: kubemq/kubemq-users-web:v0.1.0
+    image: kubemq/kubemq-users-web:v0.2.0
     container_name: kubemq-users-web
     environment:
       API_ADDRESS: "http://localhost:1080"
