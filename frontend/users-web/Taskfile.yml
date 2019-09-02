@@ -4,7 +4,7 @@ version: '2'
 
 vars:
   BINARY_NAME: kubemq-users-web
-  VERSION: v0.2.0
+  VERSION: v0.2.3
 
 tasks:
   default:
@@ -28,7 +28,7 @@ tasks:
       -  docker tag kubemq/{{.BINARY_NAME}}:{{.VERSION}} kubemq/{{.BINARY_NAME}}:latest
   rundocker:
     cmds:
-      - docker run -it --rm -p 80:80 -e API_ADDRESS="http://localhost:1080" kubemq/{{.BINARY_NAME}}:{{.VERSION}}
+      - docker run -it --rm -p 80:80 -e API_ADDRESS="https://demo-api.kubemq.io" kubemq/{{.BINARY_NAME}}:{{.VERSION}}
   push:
     cmds:
       - docker push kubemq/{{.BINARY_NAME}}:{{.VERSION}}

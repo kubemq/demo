@@ -2,82 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f9e28b1-ca67-4eba-8d67-aada61ab63a4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.config.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/markdown-navigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/users-web.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Taskfile.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/users/src/app/env.service.provider.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/users/src/assets/config/production.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/users/src/env.js" afterDir="false" />
       <change beforePath="$GOPATH$/projects/kubemq/demo/.idea/workspace.xml" beforeDir="false" afterPath="$GOPATH$/projects/kubemq/demo/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$GOPATH$/projects/kubemq/demo/backend/users/.idea/workspace.xml" beforeDir="false" afterPath="$GOPATH$/projects/kubemq/demo/backend/users/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$GOPATH$/projects/kubemq/demo/deployment/docker/docker-compose.yml" beforeDir="false" afterPath="$GOPATH$/projects/kubemq/demo/deployment/docker/docker-compose.yml" afterDir="false" />
-      <change beforePath="$GOPATH$/projects/kubemq/demo/frontend/users-api/.idea/workspace.xml" beforeDir="false" afterPath="$GOPATH$/projects/kubemq/demo/frontend/users-api/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$GOPATH$/projects/kubemq/demo/frontend/users-api/web/users/.editorconfig" beforeDir="false" />
-      <change beforePath="$GOPATH$/projects/kubemq/demo/frontend/users-api/web/users/.gitignore" beforeDir="false" />
-      <change beforePath="$GOPATH$/projects/kubemq/demo/frontend/users-api/web/users/README.md" beforeDir="false" />
-      <change beforePath="$GOPATH$/projects/kubemq/demo/frontend/users-api/web/users/angular.json" beforeDir="false" />
-      <change beforePath="$GOPATH$/projects/kubemq/demo/frontend/users-api/web/users/browserslist" beforeDir="false" />
-      <change beforePath="$GOPATH$/projects/kubemq/demo/frontend/users-api/web/users/e2e/protractor.conf.js" beforeDir="false" />
-      <change beforePath="$GOPATH$/projects/kubemq/demo/frontend/users-api/web/users/e2e/src/app.e2e-spec.ts" beforeDir="false" />
-      <change beforePath="$GOPATH$/projects/kubemq/demo/frontend/users-api/web/users/e2e/src/app.po.ts" beforeDir="false" />
-      <change beforePath="$GOPATH$/projects/kubemq/demo/frontend/users-api/web/users/e2e/tsconfig.json" beforeDir="false" />
-      <change beforePath="$GOPATH$/projects/kubemq/demo/frontend/users-api/web/users/karma.conf.js" beforeDir="false" />
-      <change beforePath="$GOPATH$/projects/kubemq/demo/frontend/users-api/web/users/package-lock.json" beforeDir="false" />
-      <change beforePath="$GOPATH$/projects/kubemq/demo/frontend/users-api/web/users/package.json" beforeDir="false" />
-      <change beforePath="$GOPATH$/projects/kubemq/demo/frontend/users-api/web/users/src/app/app-routing.module.ts" beforeDir="false" />
-      <change beforePath="$GOPATH$/projects/kubemq/demo/frontend/users-api/web/users/src/app/app.component.css" beforeDir="false" />
-      <change beforePath="$GOPATH$/projects/kubemq/demo/frontend/users-api/web/users/src/app/app.component.html" beforeDir="false" />
-      <change beforePath="$GOPATH$/projects/kubemq/demo/frontend/users-api/web/users/src/app/app.component.spec.ts" beforeDir="false" />
-      <change beforePath="$GOPATH$/projects/kubemq/demo/frontend/users-api/web/users/src/app/app.component.ts" beforeDir="false" />
-      <change beforePath="$GOPATH$/projects/kubemq/demo/frontend/users-api/web/users/src/app/app.module.ts" beforeDir="false" />
-      <change beforePath="$GOPATH$/projects/kubemq/demo/frontend/users-api/web/users/src/app/shared/user.model.spec.ts" beforeDir="false" />
-      <change beforePath="$GOPATH$/projects/kubemq/demo/frontend/users-api/web/users/src/app/shared/user.model.ts" beforeDir="false" />
-      <change beforePath="$GOPATH$/projects/kubemq/demo/frontend/users-api/web/users/src/app/shared/users-api.service.spec.ts" beforeDir="false" />
-      <change beforePath="$GOPATH$/projects/kubemq/demo/frontend/users-api/web/users/src/app/shared/users-api.service.ts" beforeDir="false" />
-      <change beforePath="$GOPATH$/projects/kubemq/demo/frontend/users-api/web/users/src/app/user/login/login.component.css" beforeDir="false" />
-      <change beforePath="$GOPATH$/projects/kubemq/demo/frontend/users-api/web/users/src/app/user/login/login.component.html" beforeDir="false" />
-      <change beforePath="$GOPATH$/projects/kubemq/demo/frontend/users-api/web/users/src/app/user/login/login.component.spec.ts" beforeDir="false" />
-      <change beforePath="$GOPATH$/projects/kubemq/demo/frontend/users-api/web/users/src/app/user/login/login.component.ts" beforeDir="false" />
-      <change beforePath="$GOPATH$/projects/kubemq/demo/frontend/users-api/web/users/src/app/user/logout/logout.component.css" beforeDir="false" />
-      <change beforePath="$GOPATH$/projects/kubemq/demo/frontend/users-api/web/users/src/app/user/logout/logout.component.html" beforeDir="false" />
-      <change beforePath="$GOPATH$/projects/kubemq/demo/frontend/users-api/web/users/src/app/user/logout/logout.component.spec.ts" beforeDir="false" />
-      <change beforePath="$GOPATH$/projects/kubemq/demo/frontend/users-api/web/users/src/app/user/logout/logout.component.ts" beforeDir="false" />
-      <change beforePath="$GOPATH$/projects/kubemq/demo/frontend/users-api/web/users/src/app/user/register/register.component.css" beforeDir="false" />
-      <change beforePath="$GOPATH$/projects/kubemq/demo/frontend/users-api/web/users/src/app/user/register/register.component.html" beforeDir="false" />
-      <change beforePath="$GOPATH$/projects/kubemq/demo/frontend/users-api/web/users/src/app/user/register/register.component.spec.ts" beforeDir="false" />
-      <change beforePath="$GOPATH$/projects/kubemq/demo/frontend/users-api/web/users/src/app/user/register/register.component.ts" beforeDir="false" />
-      <change beforePath="$GOPATH$/projects/kubemq/demo/frontend/users-api/web/users/src/app/user/user.component.css" beforeDir="false" />
-      <change beforePath="$GOPATH$/projects/kubemq/demo/frontend/users-api/web/users/src/app/user/user.component.html" beforeDir="false" />
-      <change beforePath="$GOPATH$/projects/kubemq/demo/frontend/users-api/web/users/src/app/user/user.component.spec.ts" beforeDir="false" />
-      <change beforePath="$GOPATH$/projects/kubemq/demo/frontend/users-api/web/users/src/app/user/user.component.ts" beforeDir="false" />
-      <change beforePath="$GOPATH$/projects/kubemq/demo/frontend/users-api/web/users/src/app/user/verify/verify.component.css" beforeDir="false" />
-      <change beforePath="$GOPATH$/projects/kubemq/demo/frontend/users-api/web/users/src/app/user/verify/verify.component.html" beforeDir="false" />
-      <change beforePath="$GOPATH$/projects/kubemq/demo/frontend/users-api/web/users/src/app/user/verify/verify.component.spec.ts" beforeDir="false" />
-      <change beforePath="$GOPATH$/projects/kubemq/demo/frontend/users-api/web/users/src/app/user/verify/verify.component.ts" beforeDir="false" />
-      <change beforePath="$GOPATH$/projects/kubemq/demo/frontend/users-api/web/users/src/assets/.gitkeep" beforeDir="false" />
-      <change beforePath="$GOPATH$/projects/kubemq/demo/frontend/users-api/web/users/src/environments/environment.prod.ts" beforeDir="false" />
-      <change beforePath="$GOPATH$/projects/kubemq/demo/frontend/users-api/web/users/src/environments/environment.ts" beforeDir="false" />
-      <change beforePath="$GOPATH$/projects/kubemq/demo/frontend/users-api/web/users/src/favicon.ico" beforeDir="false" />
-      <change beforePath="$GOPATH$/projects/kubemq/demo/frontend/users-api/web/users/src/index.html" beforeDir="false" />
-      <change beforePath="$GOPATH$/projects/kubemq/demo/frontend/users-api/web/users/src/main.ts" beforeDir="false" />
-      <change beforePath="$GOPATH$/projects/kubemq/demo/frontend/users-api/web/users/src/polyfills.ts" beforeDir="false" />
-      <change beforePath="$GOPATH$/projects/kubemq/demo/frontend/users-api/web/users/src/styles.css" beforeDir="false" />
-      <change beforePath="$GOPATH$/projects/kubemq/demo/frontend/users-api/web/users/src/test.ts" beforeDir="false" />
-      <change beforePath="$GOPATH$/projects/kubemq/demo/frontend/users-api/web/users/tsconfig.app.json" beforeDir="false" />
-      <change beforePath="$GOPATH$/projects/kubemq/demo/frontend/users-api/web/users/tsconfig.json" beforeDir="false" />
-      <change beforePath="$GOPATH$/projects/kubemq/demo/frontend/users-api/web/users/tsconfig.spec.json" beforeDir="false" />
-      <change beforePath="$GOPATH$/projects/kubemq/demo/frontend/users-api/web/users/tslint.json" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -310,6 +235,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="3086" height="1702" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />

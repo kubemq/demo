@@ -1,4 +1,4 @@
-module github.com/kubemq/demo/frontend/identity
+module github.com/kubemq/demo/frontend/users-api
 
 go 1.12
 
@@ -11,6 +11,10 @@ require (
 	github.com/labstack/gommon v0.2.1 // indirect
 	github.com/mattn/go-colorable v0.0.9 // indirect
 	github.com/mattn/go-isatty v0.0.4 // indirect
+	github.com/pkg/errors v0.8.1 // indirect
 	github.com/spf13/viper v1.3.2
 	github.com/valyala/fasttemplate v1.0.1 // indirect
+	go.uber.org/atomic v1.4.0 // indirect
+	go.uber.org/multierr v1.1.0 // indirect
+	go.uber.org/zap v1.10.0
 )

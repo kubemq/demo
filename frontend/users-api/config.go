@@ -22,7 +22,7 @@ func LoadConfig() (*Config, error) {
 	viper.SetConfigName(".config")
 	viper.BindEnv("Port", "PORT")
 	viper.BindEnv("KubeMQHost", "KUBEMQ_HOST")
-	viper.BindEnv("KubeMQPort", "KUBEMQ_POST")
+	viper.BindEnv("KubeMQPort", "KUBEMQ_PORT")
 	viper.BindEnv("UsersChannel", "USERS_CHANNEL")
 	viper.BindEnv("CacheChannel", "CACHE_CHANNEL")
 	viper.BindEnv("AuditChannel", "AUDIT_CHANNEL")

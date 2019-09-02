@@ -1,2 +1,2 @@
-apiAddress: "http://localhost:80"
-interval: 15
+apiAddress: "http://localhost:1080"
+interval: 5

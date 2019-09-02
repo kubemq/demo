@@ -149,16 +149,16 @@ services:
       - kubemq-users-api
     networks:
       - frontend
-#  kubemq-demo-runner:
-#    image: kubemq/kubemq-demo-runner:v0.1.0
-#    container_name: kubemq-demo-runner
-#    environment:
-#      API_ADDRESS: http://kubemq-users-api:80
-#      INTERVAL: 15
-#    depends_on:
-#      - kubemq-users-api
-#    networks:
-#      - frontend
+  kubemq-demo-runner:
+    image: kubemq/kubemq-demo-runner:v0.1.0
+    container_name: kubemq-demo-runner
+    environment:
+      API_ADDRESS: http://localhost:1080
+      INTERVAL: 5
+    depends_on:
+      - kubemq-users-api
+    networks:
+      - frontend
   postgres:
     image: postgres
     container_name: postgres

@@ -40,18 +40,7 @@ func NewServer(kube *KubeMQ, config *Config) (*Server, error) {
 	e.POST("/logout", func(c echo.Context) error {
 		return s.logout(c)
 	})
-	//e.POST("/password_reset", func(c echo.Context) error {
-	//	return s.passwordReset(c)
-	//})
-	//e.POST("/password_change", func(c echo.Context) error {
-	//	return s.passwordChange(c)
-	//})
-	//e.POST("/lock", func(c echo.Context) error {
-	//	return s.lock(c)
-	//})
-	//e.POST("/unlock", func(c echo.Context) error {
-	//	return s.unlock(c)
-	//})
+
 
 	go func() {
 		_ = s.echoWebServer.Start(":" + s.cfg.Port)

@@ -38,7 +38,7 @@ func main() {
 	}
 	http.Handle("/", http.FileServer(http.Dir("./web/users/dist/users")))
 	go http.ListenAndServe(fmt.Sprintf(":%d", cfg.ServerPort), nil)
-	log.Println("shutdown web server....")
 	<-gracefulShutdown
+	log.Println("shutdown web server....")
 
 }
