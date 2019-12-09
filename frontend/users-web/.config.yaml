@@ -1,2 +1,2 @@
-apiAddress: "https://demo-api.kubemq.io"
+apiAddress: "http://localhost:8888"
 serverPort: 80

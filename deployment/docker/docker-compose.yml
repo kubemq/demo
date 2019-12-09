@@ -1,20 +1,20 @@
 version: '3.7'
 services:
-  kubemq:
-    image: kubemq/kubemq:v1.5.1
-    container_name: kubemq
-    ports:
-      - "8080:8080"
-      - "9090:9090"
-      - "50000:50000"
-    environment:
-      - KUBEMQ_HOST=kubemq
-      - KUBEMQ_TOKEN=c5111981-0a76-45f1-81a3-080af7fb6028
-    networks:
-      - backend
-      - frontend
-    volumes:
-      - kubemq_vol:/store
+#  kubemq:
+#    image: kubemq/kubemq:v1.5.1
+#    container_name: kubemq
+#    ports:
+#      - "8080:8080"
+#      - "9090:9090"
+#      - "50000:50000"
+#    environment:
+#      - KUBEMQ_HOST=kubemq
+#      - KUBEMQ_TOKEN=c5111981-0a76-45f1-81a3-080af7fb6028
+#    networks:
+#      - backend
+#      - frontend
+#    volumes:
+#      - kubemq_vol:/store
   elasticsearch:
     image: docker.elastic.co/elasticsearch/elasticsearch:7.0.1
     container_name: elasticsearch
@@ -43,19 +43,19 @@ services:
       - elasticsearch
     networks:
       - backend
-  kubemq-history-service:
-    image: kubemq/kubemq-elastic:v0.2.0
-    container_name: kubemq-history-service
-    environment:
-      ELASTIC_ADDRESS: http://elasticsearch:9200/
-      KUBEMQ_HOST: kubemq
-      KUBEMQ_POST: 50000
-      CHANNEL: "history"
-      GROUP: ""
-    depends_on:
-      - elasticsearch
-    networks:
-      - backend
+#  kubemq-history-service:
+#    image: kubemq/kubemq-elastic:v0.2.0
+#    container_name: kubemq-history-service
+#    environment:
+#      ELASTIC_ADDRESS: http://elasticsearch:9200/
+#      KUBEMQ_HOST: kubemq
+#      KUBEMQ_POST: 50000
+#      CHANNEL: "history"
+#      GROUP: ""
+#    depends_on:
+#      - elasticsearch
+#    networks:
+#      - backend
   redis:
     image: redis
     container_name: redis
@@ -63,102 +63,102 @@ services:
       - "6379:6379"
     networks:
       - backend
-  kubemq-cache-service:
-    image: kubemq/kubemq-redis:v0.2.0
-    container_name: kubemq-cache-service
-    environment:
-      REDIS_ADDRESS: "redis:6379"
-      KUBEMQ_HOST: kubemq
-      KUBEMQ_POST: 50000
-      CHANNEL: "cache"
-      GROUP: ""
-      HISTORY_CHANNEL: "history"
-    depends_on:
-      - kubemq
-      - redis
-    networks:
-      - backend
-  kubemq-notification-service:
-      image: kubemq/kubemq-slack-notification:v0.1.0
-      container_name: kubemq-notification-service
-      environment:
-        KUBEMQ_HOST: kubemq
-        KUBEMQ_POST: 50000
-        CHANNEL: "notification"
-        GROUP: ""
-        SLACK_TOKEN: xoxp-493945570944-495734721911-650924474919-d4773a8f67aa23c08e270cfde2b68187
-      depends_on:
-        - kubemq
-      networks:
-        - backend
-  kubemq-users-service:
-    image: kubemq/kubemq-users:v0.2.4
-    container_name: kubemq-users-service
-    environment:
-      POSTGRES_HOST: postgres
-      POSTGRES_PORT: 5432
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: password
-      POSTGRES_DB: postgres
-      USERS_CHANNEL: users
-      CACHE_CHANNEL: cache
-      AUDIT_CHANNEL: audit
-      HISTORY_CHANNEL: history
-      LOGS_CHANNEL: logs
-      CONFIG_CHANNEL: config
-      NOTIFICATION_CHANNEL: notification
-      KUBEMQ_HOST: kubemq
-      KUBEMQ_POST: 50000
-      CHANNEL: "history"
-      GROUP: ""
-    depends_on:
-      - postgres
-      - kubemq
-    networks:
-      - backend
-  kubemq-users-api:
-    image: kubemq/kubemq-users-api:v0.2.1
-    container_name: kubemq-users-api
-    environment:
-      PORT: 80
-      USERS_CHANNEL: users
-      CACHE_CHANNEL: cache
-      AUDIT_CHANNEL: audit
-      HISTORY_CHANNEL: history
-      LOGS_CHANNEL: logs
-      CONFIG_CHANNEL: config
-      NOTIFICATION_CHANNEL: notification
-      KUBEMQ_HOST: kubemq
-      KUBEMQ_POST: 50000
-      CHANNEL: "history"
-      GROUP: ""
-    ports:
-      - "1080:80"
-    depends_on:
-      - kubemq
-    networks:
-      - frontend
-  kubemq-users-web:
-    image: kubemq/kubemq-users-web:v0.2.0
-    container_name: kubemq-users-web
-    environment:
-      API_ADDRESS: "http://localhost:1080"
-    ports:
-      - "80:80"
-    depends_on:
-      - kubemq-users-api
-    networks:
-      - frontend
-  kubemq-demo-runner:
-    image: kubemq/kubemq-demo-runner:v0.1.0
-    container_name: kubemq-demo-runner
-    environment:
-      API_ADDRESS: http://localhost:1080
-      INTERVAL: 5
-    depends_on:
-      - kubemq-users-api
-    networks:
-      - frontend
+#  kubemq-cache-service:
+#    image: kubemq/kubemq-redis:v0.2.0
+#    container_name: kubemq-cache-service
+#    environment:
+#      REDIS_ADDRESS: "redis:6379"
+#      KUBEMQ_HOST: kubemq
+#      KUBEMQ_POST: 50000
+#      CHANNEL: "cache"
+#      GROUP: ""
+#      HISTORY_CHANNEL: "history"
+#    depends_on:
+#      - kubemq
+#      - redis
+#    networks:
+#      - backend
+#  kubemq-notification-service:
+#      image: kubemq/kubemq-slack-notification:v0.1.0
+#      container_name: kubemq-notification-service
+#      environment:
+#        KUBEMQ_HOST: kubemq
+#        KUBEMQ_POST: 50000
+#        CHANNEL: "notification"
+#        GROUP: ""
+#        SLACK_TOKEN: xoxp-493945570944-495734721911-650924474919-d4773a8f67aa23c08e270cfde2b68187
+#      depends_on:
+#        - kubemq
+#      networks:
+#        - backend
+#  kubemq-users-service:
+#    image: kubemq/kubemq-users:v0.2.4
+#    container_name: kubemq-users-service
+#    environment:
+#      POSTGRES_HOST: postgres
+#      POSTGRES_PORT: 5432
+#      POSTGRES_USER: postgres
+#      POSTGRES_PASSWORD: password
+#      POSTGRES_DB: postgres
+#      USERS_CHANNEL: users
+#      CACHE_CHANNEL: cache
+#      AUDIT_CHANNEL: audit
+#      HISTORY_CHANNEL: history
+#      LOGS_CHANNEL: logs
+#      CONFIG_CHANNEL: config
+#      NOTIFICATION_CHANNEL: notification
+#      KUBEMQ_HOST: kubemq
+#      KUBEMQ_POST: 50000
+#      CHANNEL: "history"
+#      GROUP: ""
+#    depends_on:
+#      - postgres
+#      - kubemq
+#    networks:
+#      - backend
+#  kubemq-users-api:
+#    image: kubemq/kubemq-users-api:v0.2.1
+#    container_name: kubemq-users-api
+#    environment:
+#      PORT: 80
+#      USERS_CHANNEL: users
+#      CACHE_CHANNEL: cache
+#      AUDIT_CHANNEL: audit
+#      HISTORY_CHANNEL: history
+#      LOGS_CHANNEL: logs
+#      CONFIG_CHANNEL: config
+#      NOTIFICATION_CHANNEL: notification
+#      KUBEMQ_HOST: kubemq
+#      KUBEMQ_POST: 50000
+#      CHANNEL: "history"
+#      GROUP: ""
+#    ports:
+#      - "1080:80"
+#    depends_on:
+#      - kubemq
+#    networks:
+#      - frontend
+#  kubemq-users-web:
+#    image: kubemq/kubemq-users-web:v0.2.0
+#    container_name: kubemq-users-web
+#    environment:
+#      API_ADDRESS: "http://localhost:1080"
+#    ports:
+#      - "80:80"
+#    depends_on:
+#      - kubemq-users-api
+#    networks:
+#      - frontend
+#  kubemq-demo-runner:
+#    image: kubemq/kubemq-demo-runner:v0.1.0
+#    container_name: kubemq-demo-runner
+#    environment:
+#      API_ADDRESS: http://localhost:1080
+#      INTERVAL: 5
+#    depends_on:
+#      - kubemq-users-api
+#    networks:
+#      - frontend
   postgres:
     image: postgres
     container_name: postgres

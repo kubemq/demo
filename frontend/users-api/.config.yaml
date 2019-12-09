@@ -1,4 +1,4 @@
-port: "80"
+port: "8888"
 kubeMQHost: "localhost"
 kubeMQPort: 50000
 usersChannel: "users"
